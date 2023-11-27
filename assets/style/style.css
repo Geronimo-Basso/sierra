@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header-color: #F3F3F3;
+}
+
+header {
+    background-color: var(--header-color);
+}
