@@ -1,16 +1,23 @@
 <header>
     <div class="flexbox-container-header">
         <div class="flexbox-container-logo">
-            <img src="assets/images/logo-header.svg">
-            <ul>Sierra</ul>
+            <img id="logo-image" src="assets/images/logo-header.svg" alt="sierra-logo">
+            <p>Sierra</p>
         </div>
-        <nav>
-            <ul>Inicio</ul>
-            <ul>Donación</ul>
-            <ul>Contacto</ul>
-            <ul>Sobre nosotros</ul>
-            <ul>Iniciar Sesión</ul>
-            <ul>Registrarse</ul>
+        <nav class="flexbox-container-navigation">
+            <ul>
+                <li>Inicio</li>
+                <li>Donación</li>
+                <li>Contacto</li>
+                <li>Sobre nosotros</li>
+            </ul>
         </nav>
+        <nav class="flexbox-container-log-in">
+            <ul class="flexbox-item-log-in">
+                <li>Iniciar Sesión</li>
+                <li>Registrarse</li>
+            </ul>
+        </nav>
+
     </div>
 </header>
