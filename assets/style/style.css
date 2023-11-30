@@ -1,6 +1,9 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pixelify+Sans&display=swap');
+
+html {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', serif;
 }
 
 :root {
@@ -9,4 +12,32 @@
 
 header {
     background-color: var(--header-color);
+    border-radius: 14px;
+    margin: 0 180px;
+
+}
+
+.flexbox-container-header {
+    margin: 0 20px;
+    display: flex;
+    border-radius: 14px;
+    justify-content: space-between;
+}
+
+.flexbox-container-logo {
+    display: flex;
+}
+
+.flexbox-container-navigation {
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.flexbox-item-log-in{
+    justify-content: flex-start;
+    margin-left: 100px;
+
 }
