@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sierra | Donaciones a ex militares</title>
     <link rel="icon" type="image/x-icon" href="assets/images/logo-header.svg">
-    <link rel="sylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body>
-<?php include 'includes/header.php'; ?>
+<?php require 'includes/header.php'; ?>
 <main>
     <div>
         <h1>En Sierra recaudamos donaciones para ex militares españoles.</h1>
@@ -26,6 +26,6 @@
     <img src="assets/images/army-logo-3.svg">
     <img src="assets/images/army-logo-4.svg">
 </aside>
-<?php include 'includes/footer.php'; ?>
+<?php require 'includes/footer.php'; ?>
 </body>
 </html>
