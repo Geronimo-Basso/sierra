@@ -10,11 +10,12 @@ html {
     --header-color: #F3F3F3;
 }
 
+
+/* Header */
 header {
     background-color: var(--header-color);
     border-radius: 14px;
     margin: 0 180px;
-
 }
 
 .flexbox-container-header {
@@ -39,8 +40,34 @@ nav ul li {
 .flexbox-item-log-in{
     justify-content: flex-start;
     margin-left: 100px;
-
 }
+
+/* Home Page - Main */
+.main-content{
+    display: flex;
+    margin: 110px 0 0 200px;
+    text-align: center;
+}
+
+.grid-logos-army {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-left: 60px;
+}
+
+button {
+    background-color: #F53E28;
+    color: #fff;
+    padding: 25px;
+    font-size: 22px;
+    border-radius: 125px;
+    border-color: #fff;
+    margin: 30px 0;
+    box-shadow: none;
+}
+
 .footerImage{
     margin-top: 150px;
     width: 100%;

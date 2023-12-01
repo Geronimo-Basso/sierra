@@ -2,7 +2,7 @@
     <div class="flexbox-container-header">
         <div class="flexbox-container-logo">
             <img id="logo-image" src="assets/images/logo-header.svg" alt="sierra-logo">
-            <p>Sierra</p>
+            <p id="header-title">Sierra</p>
         </div>
         <nav class="flexbox-container-navigation">
             <ul>
@@ -18,6 +18,5 @@
                 <li>Registrarse</li>
             </ul>
         </nav>
-
     </div>
 </header>
