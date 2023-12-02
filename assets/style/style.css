@@ -10,12 +10,11 @@ html {
     --header-color: #F3F3F3;
 }
 
-
 /* Header */
 header {
     background-color: var(--header-color);
     border-radius: 14px;
-    margin: 0 180px;
+    margin: 0 120px;
 }
 
 .flexbox-container-header {
@@ -37,24 +36,25 @@ nav ul li {
     display: inline-block;
 }
 
-.flexbox-item-log-in{
+.flexbox-item-log-in {
     justify-content: flex-start;
     margin-left: 100px;
 }
+/* Finish Header */
 
 /* Home Page - Main */
-.main-content{
+.main-content {
     display: flex;
-    margin: 110px 0 0 200px;
+    margin: 110px 0 0 120px;
     text-align: center;
 }
 
 .grid-logos-army {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
     row-gap: 10px;
-    margin-left: 60px;
+    margin-left: 230px;
 }
 
 button {
@@ -68,11 +68,16 @@ button {
     box-shadow: none;
 }
 
-.footerSpacing{
+a {
+    color: #000; /* set the color to black */
+    text-decoration: none; /* remove the underline */
+}
+
+.footerSpacing {
     padding-bottom: 10%;
 }
 
-.footerImage{
+.footerImage {
     position: absolute;
     left: 0;
     bottom: 0;
