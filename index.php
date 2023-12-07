@@ -11,7 +11,7 @@
 <?php require 'includes/header.php'; ?>
 <div class="main-content">
     <div class="main-content-home">
-        <h1>En Sierra <b>recaudamos donaciones</b> para <br> ex <b>militares españoles</b></h1>
+        <h1>En Sierra recaudamos donaciones para <br> ex militares españoles</h1>
         <a href="">
             <button>Haz una donación</button>
         </a>
