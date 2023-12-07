@@ -50,7 +50,7 @@ nav ul li {
 
 /* Finish Header */
 
-/* Home Page - Main */
+/* Home Page  */
 .main-content {
     display: flex;
     margin: 50px 0 50px 140px;
@@ -77,6 +77,43 @@ button {
     border: none;
 }
 
+/* Home Page  */
+
+/* Login page*/
+.login-in-flexbox-main-content{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px 0 0 0;
+    text-align: center;
+}
+
+.login-in-flexbox-item-2{
+    text-align: left;
+}
+
+.login-in-form input{
+    margin: 0 0 20px 0;
+    border-color: #000;
+    font-size: 27px;
+    border-radius: 60px;
+    padding: 5px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-in-form input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+}
+
+.login-in-form input[type="submit"]:hover {
+    background-color: #444;
+    color: #fff;
+}
+/* Login Page */
+
+/* Footer */
 .footerF {
     position: relative;
     margin-top: 10px;
