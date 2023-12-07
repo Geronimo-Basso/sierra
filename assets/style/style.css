@@ -15,6 +15,7 @@ header {
     background-color: var(--header-color);
     border-radius: 14px;
     margin: 0 120px;
+    padding: 2px;
 }
 
 .flexbox-container-header {
@@ -28,28 +29,26 @@ header {
     display: flex;
 }
 
-.flexbox-container-navigation {
-    display: flex;
-}
-
 nav ul li {
     display: inline-block;
+    margin-left: 10px;
 }
 
 .flexbox-spacer {
     flex-grow: 1;
 }
 
-.flexbox-item-log-in {
-    justify-content: flex-start;
-    margin-left: 100px;
+#header-title{
+    margin-left: 10px;
 }
+
 /* Finish Header */
 
 /* Home Page - Main */
 .main-content {
     display: flex;
-    margin: 110px 0 0 120px;
+    margin: 110px 0 0px 120px;
+    margin-left: 140px;
     text-align: center;
 }
 

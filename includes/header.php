@@ -6,7 +6,7 @@
                 <p id="header-title">Sierra</p>
             </div>
         </a>
-        <nav class="flexbox-container-navigation">
+        <nav>
             <ul>
                 <a href="index.php">
                     <li>Inicio</li>
@@ -23,8 +23,8 @@
             </ul>
         </nav>
         <div class="flexbox-spacer"></div>
-        <nav class="flexbox-container-log-in">
-            <ul class="flexbox-item-log-in">
+        <nav>
+            <ul>
                 <a href="login.php">
                     <li>Iniciar Sesión</li>
                 </a>
