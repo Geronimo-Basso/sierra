@@ -36,6 +36,10 @@ nav ul li {
     display: inline-block;
 }
 
+.flexbox-spacer {
+    flex-grow: 1;
+}
+
 .flexbox-item-log-in {
     justify-content: flex-start;
     margin-left: 100px;

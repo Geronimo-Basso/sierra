@@ -22,6 +22,7 @@
                 </a>
             </ul>
         </nav>
+        <div class="flexbox-spacer"></div>
         <nav class="flexbox-container-log-in">
             <ul class="flexbox-item-log-in">
                 <a href="login.php">
