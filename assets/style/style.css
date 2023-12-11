@@ -115,10 +115,16 @@ button {
 
 /* About Us */
 .about-us-main-content {
-    display: flex;
-    margin: 50px 0 50px 140px;
+    margin: 50px 140px 50px 140px;
+    line-height: 2;
     text-align: center;
+
 }
+
+.about-us-main-text {
+    text-align: justify;
+}
+
 
 /* Footer */
 .footerF {
