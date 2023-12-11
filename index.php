@@ -5,19 +5,14 @@
 </head>
 <body>
 <?php require 'includes/header.php'; ?>
-<div class="main-content">
-    <div class="main-content-home">
+<div class="home-main-content">
+    <div>
         <h1>En Sierra recaudamos donaciones para <br> ex militares españoles</h1>
-        <a href="">
+        <a href="donation-main.php">
             <button>Haz una donación</button>
         </a>
-        <div class="home-walking-soliders">
-            <img class="soliders" src="assets/images/army-soldier-walking.svg">
-            <img src="assets/images/army-soldier-walking.svg">
-            <img class="soliders" src="assets/images/army-soldier-walking.svg">
-        </div>
     </div>
-    <aside class="grid-logos-army">
+    <aside class="home-grid-logos-army">
         <img src="assets/images/army-logo-1.svg">
         <img src="assets/images/army-logo-2.svg">
         <img src="assets/images/army-logo-3.svg">

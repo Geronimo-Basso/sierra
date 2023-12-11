@@ -50,19 +50,20 @@ nav ul li {
 /* Finish Header */
 
 /* Home Page  */
-.main-content {
+.home-main-content {
     display: flex;
-    margin: 50px 0 50px 140px;
+    margin: 50px 0;
     text-align: center;
+    align-items:baseline;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
 }
 
-.grid-logos-army {
+.home-grid-logos-army {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
     row-gap: 10px;
-    margin-right: 10px;
-    margin-left: 230px;
 }
 
 button {
