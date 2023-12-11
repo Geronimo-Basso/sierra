@@ -11,7 +11,7 @@
     </div>
     <div class="login-in-flexbox-item-2">
         <h2>Inicia sesión en Sierra</h2>
-        <p>¿No tiene cuenta? <a> <u>Registrate</u> </a></p>
+        <p>¿No tiene cuenta? <a href="sign-up.php"><u>Registrate</u></a></p>
         <form class="login-in-form">
             <input type="text" id="email" name="email" placeholder="Email"><br>
             <input type="password" id="password" name="password" placeholder="Contraseña"><br>
