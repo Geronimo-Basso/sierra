@@ -13,8 +13,9 @@
             <input type="text" id="name" name="name" placeholder="Nombre"><br>
             <input type="text" id="lastname" name="lastname" placeholder="Apellidos"><br>
             <input type="text" id="email" name="email" placeholder="Email"><br>
-            <input type="number" id="phone" name="phone" placeholder="Móvil"><br>
-            <textarea></textarea>
+            <input type="text" id="phone" name="phone" placeholder="Móvil"><br>
+            <textarea id="contact-textarea" placeholder="Escribe tu mensaje..."></textarea>
+            <input type="submit" value="Enviar">
         </form>
     </div>
 </div>

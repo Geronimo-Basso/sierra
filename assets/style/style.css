@@ -81,14 +81,30 @@ button {
 
 /* Contact */
 .contact-main-content {
-    margin: 0 140px 0 140px;
+    margin: 50px 0;
+    text-align: center;
+
+}
+
+.contact-form {
+    margin: 0 250px;
 }
 
 .contact-main-content input{
-    margin: 0 0 20px 0;
+    margin: 10px 0;
     border-color: #000;
-    font-size: 27px;
+    font-size: 25px;
     border-radius: 60px;
+    padding: 5px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-main-content textarea{
+    height: 200px;
+    margin: 10px 0;
+    font-size: 27px;
+    border-radius: 20px;
     padding: 5px 20px;
     width: 100%;
     box-sizing: border-box;
