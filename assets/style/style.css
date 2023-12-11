@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pixelify+Sans&display=swap');
 
-html, body{
+html, body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', serif;
@@ -44,10 +44,9 @@ nav ul li {
     flex-grow: 1;
 }
 
-#header-title{
+#header-title {
     margin-left: 10px;
 }
-
 /* Finish Header */
 
 /* Home Page  */
@@ -76,21 +75,19 @@ button {
     font-weight: bold;
     border: none;
 }
-
 /* Home Page  */
 
 /* Contact */
 .contact-main-content {
     margin: 50px 0;
     text-align: center;
-
 }
 
 .contact-form {
     margin: 0 250px;
 }
 
-.contact-main-content input{
+.contact-main-content input {
     margin: 10px 0;
     border-color: #000;
     font-size: 25px;
@@ -100,7 +97,7 @@ button {
     box-sizing: border-box;
 }
 
-.contact-main-content textarea{
+.contact-main-content textarea {
     height: 200px;
     margin: 10px 0;
     font-size: 27px;
@@ -120,20 +117,21 @@ button {
     background-color: #444;
     color: #fff;
 }
+/* Contact */
 
 /* Login page*/
-.login-in-flexbox-main-content{
+.login-in-flexbox-main-content {
     display: flex;
     justify-content: space-evenly;
     margin: 100px 0 0 0;
     text-align: center;
 }
 
-.login-in-flexbox-item-2{
+.login-in-flexbox-item-2 {
     text-align: left;
 }
 
-.login-in-form input{
+.login-in-form input {
     margin: 0 0 20px 0;
     border-color: #000;
     font-size: 27px;
