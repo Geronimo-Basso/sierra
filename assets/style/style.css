@@ -79,6 +79,32 @@ button {
 
 /* Home Page  */
 
+/* Contact */
+.contact-main-content {
+    margin: 0 140px 0 140px;
+}
+
+.contact-main-content input{
+    margin: 0 0 20px 0;
+    border-color: #000;
+    font-size: 27px;
+    border-radius: 60px;
+    padding: 5px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-main-content input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+}
+
+.contact-main-content input[type="submit"]:hover {
+    background-color: #444;
+    color: #fff;
+}
+
 /* Login page*/
 .login-in-flexbox-main-content{
     display: flex;
