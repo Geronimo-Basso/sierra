@@ -15,7 +15,6 @@
             <input type="text" id="name" name="name" placeholder="Nombre"><br>
             <input type="text" id="lastname" name="lastname" placeholder="Apellidos"><br>
             <input type="text" id="email" name="email" placeholder="Email"><br>
-            <input type="text" id="email_confirm" name="email" placeholder="Confirmar email"><br>
             <input type="password" id="password" name="password" placeholder="Contraseña"><br>
             <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirmar contraseña"><br>
             <div class="sign-up-password-requirments">

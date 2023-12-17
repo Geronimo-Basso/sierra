@@ -6,8 +6,8 @@
 <body>
 <?php require 'includes/header.php'; ?>
 <div class="home-main-content">
-    <div>
-        <h1>En Sierra recaudamos donaciones para <br> ex militares españoles</h1>
+    <div class="home-left-content">
+        <h1>En Sierra recaudamos donaciones <br> para veteranos españoles</h1>
         <a href="donation-main.php">
             <button>Haz una donación</button>
         </a>
