@@ -3,6 +3,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var footer = document.querySelector('.footerF');
+            const threeLinesIcon = document.querySelector('.three-lines');
 
             function adjustFooterPosition() {
                 var bodyHeight = document.body.scrollHeight;
@@ -21,6 +22,9 @@
             adjustFooterPosition();
 
             window.addEventListener('resize', adjustFooterPosition);
+            window.addEventListener('scroll', adjustFooterPosition)
+            window.addEventListener('load', adjustFooterPosition)
+            threeLinesIcon.addEventListener('click', adjustFooterPosition)
         });
     </script>
 </footer>
