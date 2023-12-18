@@ -350,3 +350,67 @@ button {
         display: none;
     }
 }
+
+/* Detects if the user prefers a dark color scheme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --header-color: #1a1a1a; /* Dark background for headers */
+        /* Additional dark mode colors can be defined here */
+    }
+
+    body {
+        background-color: #121212; /* Dark background */
+        color: #f3f3f3; /* Light text */
+    }
+
+    header {
+        background-color: var(--header-color);
+    }
+
+    a {
+        color: #9A9A9A; /* Lighter text color for links */
+    }
+
+    button {
+        background-color: #37474F; /* Darker button background */
+        /* Other button styles as needed */
+    }
+
+    .contact-main-content input[type="submit"],
+    .login-in-form input[type="submit"] {
+        background-color: #333; /* Darker submit button background */
+        /* Other styles as needed */
+    }
+
+    /* Dark mode styles for the floating menu */
+    .menu-overlay {
+        background-color: #2C2C2C; /* Darker background for the floating menu */
+        color: #FFFFFF; /* Light text for the floating menu */
+    }
+
+    .menu-content nav ul a {
+        color: #CCCCCC; /* Lighter link color in the floating menu */
+    }
+
+    .menu-content nav ul a:hover {
+        background-color: #414141; /* Dark hover background in the floating menu */
+    }
+
+    /* Additional dark mode styles as needed */
+    /* Dark mode styles for the Login and Registration forms */
+
+    .login-in-form input, .sign-up-main-content input,
+    .sign-up-main-content textarea {
+        background-color: #333; /* Darker background for input fields */
+        color: #f3f3f3; /* Light color for text inside input fields */
+    }
+
+    .sign-up-password-requirments {
+        background-color: #3A3A3A; /* Dark background for password requirements */
+        color: #f3f3f3; /* Light text color */
+    }
+
+    /* Modify other styles as needed */
+}
+
+

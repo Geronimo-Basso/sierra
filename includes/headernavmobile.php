@@ -47,6 +47,23 @@
                 buttonOutside.style.display = 'block';
                 buttonInside.style.display = 'none';
             });
+
+            // Function to update image based on dark mode preference
+            function updateImageForDarkMode() {
+                const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const imageUrl = prefersDarkMode ? 'assets/images/three-lines_dm.svg' : 'assets/images/three-lines.svg';
+
+                buttonOutside.src = imageUrl;
+                buttonInside.src = imageUrl;
+            }
+
+            // Call the function to set the initial image
+            updateImageForDarkMode();
+
+            // Add listener for system dark mode changes
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+                updateImageForDarkMode();
+            });
         });
     </script>
 
