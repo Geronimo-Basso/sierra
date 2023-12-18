@@ -5,6 +5,7 @@
 </head>
 <body>
 <?php require 'includes/header.php'; ?>
+<?php require 'includes/headernavmobile.php'; ?>
 <div class="contact-main-content">
     <div class="contact-side-item">
         <h1>Contacto</h1>

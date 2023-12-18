@@ -5,6 +5,7 @@
 </head>
 <body>
 <?php require 'includes/header.php'; ?>
+<?php require 'includes/headernavmobile.php'; ?>
 <div class="donation-main-content">
     <div class="donation-main-content-home">
         <h1>Ayuda a nuestros heroes</h1>
