@@ -10,6 +10,10 @@ html, body {
     --header-color: #F3F3F3;
 }
 
+.three-lines {
+    display: none;
+}
+
 /* Header */
 header {
     background-color: var(--header-color);
@@ -209,6 +213,39 @@ button {
     height: 270px;
 }
 
+.menu-overlay {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 50%; /* Center vertically */
+    right: 15px; /* Adjust as needed */
+    transform: translateY(-95%);
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10%; /* Round box */
+    width: 300px; /* Adjust as needed */
+    height: 350px; /* Adjust as needed */
+    padding: 20px; /* Add padding as needed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+}
+
+
+.menu-content nav ul {
+    margin-top: 40px;
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0; /* Remove default padding */
+}
+
+.menu-content nav ul a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set link text color */
+    display: block; /* Make the entire list item clickable */
+    padding: 15px 0; /* Add vertical spacing between items */
+}
+
+.menu-content nav ul a:hover {
+    background-color: #f0f0f0; /* Add a background color on hover */
+}
+
 @media only screen and (max-width: 1600px) {
 
     .sign-up-main-content{
@@ -227,6 +264,13 @@ button {
 
     header {
         display: none;
+    }
+
+    .three-lines {
+        display: block;
+        width: 60px;
+        margin: 30px 30px -40px auto;
+        right: 0;
     }
 
     .home-grid-logos-army {
@@ -288,4 +332,10 @@ button {
         margin: 0 10% 0 10%;
     }
 
+}
+
+@media only screen and (min-width: 1200px) {
+    .three-lines {
+        display: none;
+    }
 }

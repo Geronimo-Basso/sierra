@@ -5,6 +5,7 @@
 </head>
 <body>
 <?php require 'includes/header.php'; ?>
+<?php require 'includes/headernavmobile.php'; ?>
 <div class="home-main-content">
     <div class="home-left-content">
         <h1>En Sierra recaudamos donaciones <br> para veteranos españoles</h1>
