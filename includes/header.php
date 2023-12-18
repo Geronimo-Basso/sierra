@@ -34,4 +34,40 @@
             </ul>
         </nav>
     </div>
+
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let clickCount = 0;
+            const imageElement = document.getElementById('logo-image');
+            const audioContainer = document.getElementById("audioContainer");
+
+            imageElement.addEventListener('mouseover', function() {
+                clickCount++;
+                console.log('Image clicked' + clickCount + ' times');
+                if (clickCount > 10) {
+                    imageElement.src = 'assets/images/doge.png';
+                    imageElement.style.width = '38px';
+                    imageElement.style.height = '38px'
+                    imageElement.style.alignSelf = 'center';
+                    imageElement.style.marginTop = '5px';
+
+                    var audio = new Audio('assets/audio/fart-03.mp3');
+
+                    var promise = audio.play();
+
+                    if (promise !== undefined) {
+                        promise.then(_ => {
+                            console.log('Autoplay started');
+                        }).catch(error => {
+                            console.log('Autoplay prevented');
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+
 </header>

@@ -205,10 +205,87 @@ button {
     z-index: -1;
 }
 
-@media only screen and (max-width: 1444px) {
+#login-logo {
+    height: 270px;
+}
+
+@media only screen and (max-width: 1600px) {
+
+    .sign-up-main-content{
+        text-align: center;
+        margin: 20px 400px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+    .footerF{
+        margin-top: 2px;
+    }
 
     header {
         display: none;
+    }
+
+    .home-grid-logos-army {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    .login-in-flexbox-main-content {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        margin: 40px;
+        text-align: center;
+    }
+
+    .login-in-flexbox-item-1, .sign-up-flex-up{
+        text-align: left;
+        font-size: 0.7em;
+        font-weight: lighter;
+
+    }
+
+    img {
+        height: 50%;
+    }
+
+    #login-logo {
+        height: 100px;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    .sign-up-main-content{
+        text-align: center;
+        margin: 15%;
+    }
+
+    #create-account-h1 {
+        font-size: 4em;
+    }
+
+    #already-account-h2 {
+        font-size: 1.8em;
+        font-weight: lighter;
+    }
+
+    .sign-up-password-requirments{
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        margin: 35px 10% 5px 10%;
+    }
+    .about-us-main-content {
+        margin: 0 10% 0 10%;
     }
 
 }

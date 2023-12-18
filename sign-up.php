@@ -5,10 +5,10 @@
 </head>
 <body>
 <div class="sign-up-main-content">
-    <div>
-        <img style='height: 270px' src="assets/images/logo-header.svg">
-        <h1>Crea una cuenta</h1>
-        <h2>¿Ya tienes cuenta? <a href="login.php"><u>Inicia sesión</u></a></h2>
+    <div class="sign-up-flex-up">
+        <img id="login-logo" src="assets/images/logo-header.svg">
+        <h1 id="create-account-h1">Crea una cuenta</h1>
+        <h2 id="already-account-h2">¿Ya tienes cuenta? <a href="login.php"><u>Inicia sesión</u></a></h2>
     </div>
     <div class="sign-up-container-form">
         <form class="login-in-form">

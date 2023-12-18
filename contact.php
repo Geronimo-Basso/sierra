@@ -8,7 +8,7 @@
 <div class="contact-main-content">
     <div class="contact-side-item">
         <h1>Contacto</h1>
-        <p>Si tienes alguna duda o sugerencia puedes rellenar el siguiente formulario. Te responderemos lo más rápido que podamos.</p>
+        <p class="contact-form">Si tienes alguna duda o sugerencia puedes rellenar el siguiente formulario. Te responderemos lo más rápido que podamos.</p>
         <form class="contact-form">
             <input type="text" id="name" name="name" placeholder="Nombre"><br>
             <input type="text" id="lastname" name="lastname" placeholder="Apellidos"><br>

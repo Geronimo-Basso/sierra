@@ -6,7 +6,7 @@
 <body>
 <div class="login-in-flexbox-main-content">
     <div class="login-in-flexbox-item-1">
-        <img style='height: 270px' src="assets/images/logo-header.svg">
+        <img id="login-logo" src="assets/images/logo-header.svg">
         <h1>Te damos la bienvenida</h1>
     </div>
     <div class="login-in-flexbox-item-2">
