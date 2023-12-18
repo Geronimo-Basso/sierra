@@ -217,13 +217,14 @@ button {
     display: none;
     z-index: 1;
     position: fixed;
-    top: 50%; /* Center vertically */
+    top: 0;
+    margin-top: 2%;
     right: 15px; /* Adjust as needed */
-    transform: translateY(-95%);
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    border-radius: 10%; /* Round box */
+    transform: translateY(0);
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+    border-radius: 4%; /* Round box */
     width: 300px; /* Adjust as needed */
-    height: 350px; /* Adjust as needed */
+    height: 330px; /* Adjust as needed */
     padding: 20px; /* Add padding as needed */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
 }
@@ -266,11 +267,23 @@ button {
         display: none;
     }
 
+    img {
+        height: 50%;
+    }
+
     .three-lines {
+        position: absolute;
         display: block;
-        width: 60px;
-        margin: 30px 30px -40px auto;
+        height: 30px;
+        top: 0;
         right: 0;
+        margin: 5%;
+    }
+
+    #button-inside{
+        padding: 0;
+        position: fixed;
+        top: 0;
     }
 
     .home-grid-logos-army {
@@ -293,10 +306,6 @@ button {
         font-size: 0.7em;
         font-weight: lighter;
 
-    }
-
-    img {
-        height: 50%;
     }
 
     #login-logo {

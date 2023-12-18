@@ -1,6 +1,7 @@
 <headernavmobile>
-    <img class="three-lines" src="assets/images/three-lines.svg">
+    <img class="three-lines" id="button-outside" src="assets/images/three-lines.svg">
     <div id="menu-overlay" class="menu-overlay">
+        <img class="three-lines" id="button-inside" src="assets/images/three-lines.svg">
         <div class="menu-content">
             <nav>
                 <ul>
@@ -29,24 +30,25 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const threeLinesIcon = document.querySelector('.three-lines');
+            const buttonOutside = document.getElementById('button-outside');
+            const buttonInside = document.getElementById('button-inside');
             const menuOverlay = document.getElementById('menu-overlay');
 
-            threeLinesIcon.addEventListener('click', function () {
-                if (menuOverlay.style.display === 'none' || menuOverlay.style.display === '') {
-                    menuOverlay.style.display = 'block';
-                    threeLinesIcon.style.zIndex = '1000';
-                    threeLinesIcon.style.position = 'fixed';
-                    threeLinesIcon.style.marginTop = '-200px';
-                } else {
-                    menuOverlay.style.display = 'none';
-                    threeLinesIcon.style.zIndex = '';
-                    threeLinesIcon.style.position = '';
-                    threeLinesIcon.style.marginTop = '';
-                }
+            // Set up event listener for outside button
+            buttonOutside.addEventListener('click', function () {
+                menuOverlay.style.display = 'block';
+                buttonOutside.style.display = 'none';
+                buttonInside.style.display = 'block';
+            });
+
+            // Set up event listener for inside button
+            buttonInside.addEventListener('click', function () {
+                menuOverlay.style.display = 'none';
+                buttonOutside.style.display = 'block';
+                buttonInside.style.display = 'none';
             });
         });
-
     </script>
+
 
 </headernavmobile>
