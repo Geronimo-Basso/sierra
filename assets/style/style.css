@@ -161,18 +161,30 @@ button {
 /* Login Page */
 
 /* Sign up*/
-
 .sign-up-main-content {
     text-align: center;
     margin: 20px 500px;
 }
 
-.sign-up-password-requirments {
-    text-align: left;
-    background-color: #FFCE56;
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin-bottom: 10px ;
+.sign-up-form input {
+    margin: 0 0 20px 0;
+    border-color: #000;
+    font-size: 27px;
+    border-radius: 60px;
+    padding: 5px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sign-up-form input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+}
+
+.sign-up-form input[type="submit"]:hover {
+    background-color: #444;
+    color: #fff;
 }
 
 /* About Us */
