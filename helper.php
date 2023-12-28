@@ -34,6 +34,33 @@ function login_user($username, $password, $connection) {
             return $user;
         }
     }
-
     return false;
+}
+
+function save_campaign($title, $description, $target, $image, $connection) {
+    // Prepare the INSERT statement for campaign
+    $stmt = mysqli_prepare($connection, "INSERT INTO `campaign` (`title`, `description`, `fund_target`) VALUES (?, ?, ?)");
+    mysqli_stmt_bind_param($stmt, 'ssd', $title, $description, $target);
+    $result = mysqli_stmt_execute($stmt);
+
+    if (!$result) {
+        return false;
+    }
+
+    // Get the last inserted id
+    $campaign_id = mysqli_insert_id($connection);
+
+    // Assuming $image is a path to the image or binary data
+    // Handle the image data appropriately here
+
+    // Prepare the INSERT statement for photo
+    $stmt = mysqli_prepare($connection, "INSERT INTO `photo` (`id_campaign`, `image`) VALUES (?, ?)");
+    mysqli_stmt_bind_param($stmt, 'ib', $campaign_id, $image);
+    $result = mysqli_stmt_execute($stmt);
+
+    if (!$result) {
+        return false;
+    }
+
+    return true;
 }

@@ -8,14 +8,13 @@
     <?php require 'includes/headernavmobile.php'; ?>
     <div>
         <h1>Crear nueva campaña</h1>
-        <form enctype="multipart/form-data" action="process-admin.php" method="post">
-            <input type="text" name="title" placeholder="Titulo">
-            <textarea name="description" placeholder="Describe porque quieres juntar dinero"></textarea>
-            <input type="number" name="target" placeholder="Cantidad a recaudar">
-            <input type="file" name="image" accept="image/*" multiple>
+        <form action="process-admin.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Titulo" required>
+            <textarea name="description" placeholder="Describe porque quieres juntar dinero" required></textarea>
+            <input type="number" name="target" placeholder="Cantidad a recaudar" required>
+            <input type="file" name="image" accept="image/*" multiple required>
             <input type="submit" value="Enviar">
         </form>
-
     </div>
     <?php require 'includes/footer.php'; ?>
 </body>
