@@ -9,7 +9,7 @@ html, body {
 :root {
     --header-color: #F3F3F3;
 }
-
+/*
 .three-lines {
     display: none;
 }
@@ -261,6 +261,19 @@ button {
     border-radius: 10px;
 }
 
+/*Admin panel*/
+
+#admin-form-campaing{
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
 @media only screen and (max-width: 1600px) {
 
     .sign-up-main-content{
@@ -281,23 +294,13 @@ button {
         display: none;
     }
 
+    .home-main-content {
+        flex-flow: column;
+        align-items: center;
+    }
+
     img {
         height: 50%;
-    }
-
-    .three-lines {
-        position: absolute;
-        display: block;
-        height: 30px;
-        top: 0;
-        right: 0;
-        margin: 5%;
-    }
-
-    #button-inside{
-        padding: 0;
-        position: fixed;
-        top: 0;
     }
 
     .home-grid-logos-army {
@@ -305,6 +308,8 @@ button {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 10px;
         row-gap: 10px;
+        justify-content: center;
+        align-content: center;
     }
 
     .login-in-flexbox-main-content {
@@ -355,12 +360,6 @@ button {
         margin: 0 10% 0 10%;
     }
 
-}
-
-@media only screen and (min-width: 1200px) {
-    .three-lines {
-        display: none;
-    }
 }
 
 /* Detects if the user prefers a dark color scheme */

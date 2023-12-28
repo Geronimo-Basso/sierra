@@ -6,7 +6,7 @@
 <body>
     <?php require 'includes/header.php'; ?>
     <?php require 'includes/headernavmobile.php'; ?>
-    <div>
+    <div class="contact-main-content" id="admin-form-campaing">
         <h1>Crear nueva campaña</h1>
         <form action="process-admin.php" method="post" enctype="multipart/form-data">
             <input type="text" name="title" placeholder="Titulo" required>
