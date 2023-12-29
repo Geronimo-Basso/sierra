@@ -318,8 +318,9 @@ button {
     width: 100%;
 }
 
-.admin-table-body tbody td {
-    padding: 10px 0;
+td {
+    padding: 10px;
+    background-color: #dddddd;
     border-bottom: 10px solid #eee;
 }
 
@@ -333,6 +334,19 @@ button {
     font-weight: 600;
     text-align: center;
     appearance: none;
+}
+
+.admin-table-body input[type="number"]{
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.admin-table-body input[type="submit"]{
+    border-color: #000;
+    border-radius: 7px;
+    padding: 4px 20px;
+    width: 100%;
+    background-color: #eeeeee;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -490,6 +504,17 @@ button {
         color: #f3f3f3;
     }
     .campaing-admin-table-list{
+        background-color: #3A3A3A;
+    }
+    td {
+        padding: 10px;
+        background-color: #2C2C2C;
+        border-bottom: 10px solid #3A3A3A;
+    }
+    .admin-table-body input{
+        color: #eeeeee;
+    }
+    .admin-table-body input[type="submit"]{
         background-color: #3A3A3A;
     }
 
