@@ -16,15 +16,14 @@ if(mysqli_connect_errno()) {
 /**
  * Check if a user can log in. Also checks whether the user is a Donor or an Admin.
  *
- * @param $username
  * @param $password
  * @param $connection
  * @return array|false
  */
-function login_user($username, $password, $connection) {
+function login_user($email, $password, $connection) {
     // Prepare and execute the query
-    $stmt = mysqli_prepare($connection, "SELECT *, IF(donor.id_donor IS NOT NULL, 'donor', IF(admin.id_admin IS NOT NULL, 'admin', 'user')) as type FROM user LEFT JOIN donor ON user.id_user = donor.id_user LEFT JOIN admin ON user.id_user = admin.id_user WHERE user.email = ? LIMIT 1");
-    mysqli_stmt_bind_param($stmt, 's', $username);
+    $stmt = mysqli_prepare($connection, "SELECT * FROM user  WHERE email = ? LIMIT 1");
+    mysqli_stmt_bind_param($stmt, 's', $email);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
 
@@ -77,12 +76,9 @@ function user_register($name, $lastname, $email, $password, $connection) {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     $stmt = mysqli_prepare($connection, "INSERT INTO `user` (`email`, `password`, `name`, `lastname`) VALUES (?, ?, ?, ?)");
     mysqli_stmt_bind_param($stmt, 'ssss', $email, $hashed_password, $name, $lastname);
+
     $result_insert_query = mysqli_stmt_execute($stmt);
-
-    echo 'fail';
-
     if (!$result_insert_query) {
-        echo 'fail1';
         return false;
     }
 
@@ -93,8 +89,6 @@ function user_exists($email, $connection) {
     $stmt = mysqli_prepare($connection, "SELECT * FROM `user` WHERE email = ? LIMIT 1");
     mysqli_stmt_bind_param($stmt, 's', $email);
     mysqli_stmt_execute($stmt);
-    echo 'fail3';
-
 
     $result = mysqli_stmt_get_result($stmt);
     return mysqli_num_rows($result) > 0;

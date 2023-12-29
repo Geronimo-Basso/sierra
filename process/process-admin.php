@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'helper.php';
+require_once '../helper.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST['title'];
