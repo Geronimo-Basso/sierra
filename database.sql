@@ -3,28 +3,15 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+-- Creating the modified user table
 CREATE TABLE `user` (
 `id_user` INT NOT NULL AUTO_INCREMENT,
 `email` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
 `password` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
+`name` VARCHAR(255) COLLATE utf8_spanish_ci,
+`lastname` VARCHAR(255) COLLATE utf8_spanish_ci,
+`is_admin` BOOLEAN DEFAULT FALSE,
 PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
-CREATE TABLE `donor` (
- `id_donor` INT NOT NULL AUTO_INCREMENT,
- `id_user` INT,
- `name` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
- `lastname` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
- PRIMARY KEY (`id_donor`),
- FOREIGN KEY (`id_user`) REFERENCES `user`(`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
-CREATE TABLE `admin` (
- `id_admin` INT NOT NULL AUTO_INCREMENT,
- `id_user` INT,
- `username` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
- PRIMARY KEY (`id_admin`),
- FOREIGN KEY (`id_user`) REFERENCES `user`(`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 CREATE TABLE `campaign` (

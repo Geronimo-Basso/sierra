@@ -11,15 +11,15 @@
                 <h2 id="already-account-h2">¿Ya tienes cuenta? <a href="login.php"><u>Inicia sesión</u></a></h2>
             </div>
             <div class="sign-up-container-form">
-                <form class="sign-up-form">
+                <form class="sign-up-form" action="process/process-sign-up.php" method="post">
                     <div class="tab" style="display:block;">
-                        <input type="text" name="name" placeholder="Nombre"><br>
-                        <input type="text" name="lastname" placeholder="Apellidos"><br>
+                        <input type="text" name="name" placeholder="Nombre" required><br>
+                        <input type="text" name="lastname" placeholder="Apellidos" required><br>
                         <button type="button" onclick="showTab(1)">Next</button>
                     </div>
                     <div class="tab" style="display:none;">
-                        <input type="text" id="email" name="email" placeholder="Email"><br>
-                        <input type="password" id="password" name="password" placeholder="Contraseña"><br>
+                        <input type="text" id="email" name="email" placeholder="Email" required><br>
+                        <input type="password" id="password" name="password" placeholder="Contraseña" required><br>
                         <button type="button" onclick="showTab(0)">Previous</button>
                         <button type="submit">Submit</button>
                     </div>
