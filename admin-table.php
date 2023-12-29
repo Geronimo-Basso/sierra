@@ -67,5 +67,6 @@ if (isset($_POST['save_changes'])) {
         </tbody>
     </table>
 </div>
+<?php require 'includes/footer.php'; ?>
 </body>
 </html>
