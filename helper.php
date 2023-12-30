@@ -93,3 +93,23 @@ function user_exists($email, $connection) {
     $result = mysqli_stmt_get_result($stmt);
     return mysqli_num_rows($result) > 0;
 }
+
+function fetch_all_campaigns($connection) {
+    $query = "SELECT * FROM campaign";
+    $result = mysqli_query($connection, $query);
+    if (!$result) {
+        die("Database query failed.");
+    }
+
+    $campaigns = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    return $campaigns;
+}
+
+function update_campaign($id, $title, $description, $fund_target, $connection) {
+    $stmt = mysqli_prepare($connection, "UPDATE campaign SET title=?, description=?, fund_target=? WHERE id_campaign=?");
+    mysqli_stmt_bind_param($stmt, 'ssdi', $title, $description, $fund_target, $id);
+    $result = mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $result;
+}

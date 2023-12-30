@@ -274,6 +274,81 @@ button {
     text-align: center;
 }
 
+.ul-header-admin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+#admin-header-li{
+    margin-right: 20px;
+}
+
+.ul-header-admin.input {
+    border-color: #000;
+    border-radius: 60px;
+    padding: 5px 20px;
+    width: 100%;
+}
+
+.admin-table-main-content {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.admin-table-main-content h2 {
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.campaing-admin-table-list{
+    align-content: center;
+    text-align: center;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    padding: 30px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    background-color: #dddddd;
+    border-bottom: 10px solid #eee;
+}
+
+.admin-table-body input, .admin-table-body textarea {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 1em;
+    font-family: 'Montserrat', serif;
+    font-weight: 600;
+    text-align: center;
+    appearance: none;
+}
+
+.admin-table-body input[type="number"]{
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.admin-table-body input[type="submit"]{
+    border-color: #000;
+    border-radius: 7px;
+    padding: 4px 20px;
+    width: 100%;
+    background-color: #eeeeee;
+}
+
 @media only screen and (max-width: 1600px) {
 
     .sign-up-main-content{
@@ -421,7 +496,28 @@ button {
         color: #f3f3f3; /* Light text color */
     }
 
-    /* Modify other styles as needed */
+    .admin-table-main-content {
+        background-color: #333;
+        color: #f3f3f3;
+    }
+    .admin-table-main-content h2 {
+        color: #f3f3f3;
+    }
+    .campaing-admin-table-list{
+        background-color: #3A3A3A;
+    }
+    td {
+        padding: 10px;
+        background-color: #2C2C2C;
+        border-bottom: 10px solid #3A3A3A;
+    }
+    .admin-table-body input{
+        color: #eeeeee;
+    }
+    .admin-table-body input[type="submit"]{
+        background-color: #3A3A3A;
+    }
+
 }
 
 

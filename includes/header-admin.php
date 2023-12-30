@@ -8,9 +8,12 @@
         </a>
         <div class="flexbox-spacer"></div>
         <nav>
-            <ul>
+            <ul class="ul-header-admin">
+                <a href="/sierra/admin-table.php">
+                    <li id="admin-header-li">Modify campaings</li>
+                </a>
                 <form action="includes/close-session.php" method="post">
-                    <input style=""  type="submit" value="Cerrar Sesión">
+                    <input class="ul-header-admin input" style=""  type="submit" value="Cerrar Sesión">
                 </form>
             </ul>
         </nav>
