@@ -3,7 +3,6 @@
 <head>
     <?php require 'head.php'?>
     <?php require 'includes/headernavmobile.php'; ?>
-    <title>Hola</title>
 </head>
 <body>
 <?php require 'includes/header.php'; ?>

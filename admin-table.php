@@ -7,7 +7,6 @@ if (!isset($_SESSION['admin_email'])) {
     exit();
 }
 
-
 if (isset($_POST['save_changes'])) {
     $id = $_POST['id'];
     $title = $_POST['title'];
@@ -23,7 +22,6 @@ if (isset($_POST['save_changes'])) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

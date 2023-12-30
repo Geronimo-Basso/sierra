@@ -1,6 +1,6 @@
 <?php
-require_once 'helper.php';
 /** @var mysqli $connection */
+require_once 'helper.php';
 session_start();
 $campaigns = fetch_all_campaigns($connection);
 ?>
@@ -18,11 +18,12 @@ $campaigns = fetch_all_campaigns($connection);
         </div>
         <div class="donation-main-boxes">
             <?php foreach ($campaigns as $campaign):?>
+            <a href="donation-single.php?campaign_id=<?php echo htmlspecialchars($campaign['id_campaign']); ?>">
                 <div class="donation-main-box">
                     <h3><?php echo htmlspecialchars($campaign['title']); ?></h3>
-                    <img style="width: 240px;" src="assets/images/flying-cazas.png">
                     <p><?php echo htmlspecialchars($campaign['fund_target']); ?></p>
                 </div>
+            </a>
             <?php
             endforeach;
             ?>

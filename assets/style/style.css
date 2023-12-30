@@ -95,6 +95,12 @@ button {
 .donation-main-box {
     margin: 0 10px;
 }
+/* Donation single */
+.donation-single-main-content {
+    display: flex;
+    margin: 0 140px;
+
+}
 
 /* Contact */
 .contact-main-content {

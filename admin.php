@@ -18,7 +18,7 @@ if (!$_SESSION['admin_email']) {
             <input type="text" name="title" placeholder="Titulo" required>
             <textarea name="description" placeholder="Describe porque quieres juntar dinero" required></textarea>
             <input type="number" name="target" placeholder="Cantidad a recaudar" required>
-            <input type="file" name="image" accept="image/*" multiple required>
+            <input type="file" name="image" accept="image/png" required>
             <input type="submit" value="Enviar">
         </form>
     </div>

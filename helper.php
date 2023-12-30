@@ -46,23 +46,8 @@ function login_user($email, $password, $connection) {
  */
 function save_campaign($title, $description, $target, $image, $connection) {
     // Prepare the INSERT statement for campaign
-    $stmt = mysqli_prepare($connection, "INSERT INTO `campaign` (`title`, `description`, `fund_target`) VALUES (?, ?, ?)");
-    mysqli_stmt_bind_param($stmt, 'ssd', $title, $description, $target);
-    $result = mysqli_stmt_execute($stmt);
-
-    if (!$result) {
-        return false;
-    }
-
-    // Get the last inserted id
-    $campaign_id = mysqli_insert_id($connection);
-
-    // Assuming $image is a path to the image or binary data
-    // Handle the image data appropriately here
-
-    // Prepare the INSERT statement for photo
-    $stmt = mysqli_prepare($connection, "INSERT INTO `photo` (`id_campaign`, `image`) VALUES (?, ?)");
-    mysqli_stmt_bind_param($stmt, 'ib', $campaign_id, $image);
+    $stmt = mysqli_prepare($connection, "INSERT INTO `campaign` (`title`, `description`, `fund_target`,`image`) VALUES (?, ?, ?,?)");
+    mysqli_stmt_bind_param($stmt, 'ssdb', $title, $description, $target,$image);
     $result = mysqli_stmt_execute($stmt);
 
     if (!$result) {
@@ -106,10 +91,37 @@ function fetch_all_campaigns($connection) {
     return $campaigns;
 }
 
+function get_single_campaign($id_campaign, $connection) {
+    // Prepare the statement
+    $stmt = mysqli_prepare($connection, "SELECT * FROM campaign WHERE id_campaign=?");
+
+    // Bind the input parameter
+    mysqli_stmt_bind_param($stmt, 's', $id_campaign);
+
+    // Execute the query
+    mysqli_stmt_execute($stmt);
+
+    // Bind the result variables
+    $result = mysqli_stmt_get_result($stmt);
+
+    // Fetch the data
+    $campaign = mysqli_fetch_assoc($result);
+
+    // Close the statement
+    mysqli_stmt_close($stmt);
+
+    // Return the fetched data
+    return $campaign;
+}
+
 function update_campaign($id, $title, $description, $fund_target, $connection) {
     $stmt = mysqli_prepare($connection, "UPDATE campaign SET title=?, description=?, fund_target=? WHERE id_campaign=?");
     mysqli_stmt_bind_param($stmt, 'ssdi', $title, $description, $fund_target, $id);
     $result = mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     return $result;
+}
+
+function blobToDataURI($blob, $mimeType) {
+    return 'data:' . $mimeType . ';base64,' . base64_encode($blob);
 }
