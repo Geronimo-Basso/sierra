@@ -17,12 +17,10 @@ $campaign = get_single_campaign($campaign_id,$connection);
     <div class="donation-single-main-left">
         <h1><?php echo htmlspecialchars($campaign['title']); ?> </h1>
         <p><?php echo htmlspecialchars($campaign['description']); ?></p>
-        <form class="contact-form">
-            <input type="submit" value="Haz una donación">
-        </form>
+        <button>Haz una donación</button>
     </div>
-    <div class="donation-single-main-left">
-        <img src="assets/images/flying-cazas.png">
+    <div class="donation-single-main-right">
+        <img style="width: 500px; margin-top: 40px;" src="assets/images/flying-cazas.png" id="donation-single-main-image">
     </div>
 </main>
 <?php require 'includes/footer.php'; ?>
