@@ -2,7 +2,6 @@
 require 'helper.php';
 session_start();
 
-
 if (!isset($_SESSION['admin_email'])) {
     header("Location: index.php");
     exit();
@@ -34,7 +33,6 @@ if (isset($_POST['save_changes'])) {
 <body>
 <?php require 'includes/header-admin.php'; ?>
 <?php require 'includes/headernavmobile.php'; ?>
-
 <div class="admin-table-main-content">
     <h2>Campaigns</h2>
     <table class="campaing-admin-table-list">

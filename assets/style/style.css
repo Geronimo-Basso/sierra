@@ -63,8 +63,6 @@ nav ul li {
     flex-wrap: wrap;
 }
 
-
-
 .home-grid-logos-army {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -83,6 +81,20 @@ button {
     border: none;
 }
 /* Home Page  */
+
+/* Donation Page */
+.donation-main-content {
+    margin: 0 140px;
+}
+
+
+.donation-main-boxes {
+    display: flex;
+}
+
+.donation-main-box {
+    margin: 0 10px;
+}
 
 /* Contact */
 .contact-main-content {

@@ -16,5 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $_SESSION['error'] = 'ERROR, la campaña no se guardo';
     }
+    header("Location: ../admin.php");
     mysqli_close($connection);
+    exit();
 }
