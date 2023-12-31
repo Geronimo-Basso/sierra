@@ -16,4 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_campaign = $_POST['id_campaign'];
 
     $save_donation = save_donation($email,$id_campaign,$amount,date("Y-m-d H:i:s"),$connection);
+
+    if ($save_donation) {
+        header("Location: ../donation-single.php");
+    } else {
+        header("Location: ../donation-single.php");
+    }
 }
