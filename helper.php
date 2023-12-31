@@ -44,10 +44,10 @@ function login_user($email, $password, $connection) {
  * @param $connection
  * @return bool
  */
-function save_campaign($title, $description, $target, $image, $connection) {
+function save_campaign($title, $description, $target, $imageUrl, $connection) {
     // Prepare the INSERT statement for campaign
-    $stmt = mysqli_prepare($connection, "INSERT INTO `campaign` (`title`, `description`, `fund_target`,`image`) VALUES (?, ?, ?,?)");
-    mysqli_stmt_bind_param($stmt, 'ssdb', $title, $description, $target,$image);
+    $stmt = mysqli_prepare($connection, "INSERT INTO `campaign` (`title`, `description`, `fund_target`, `image_url`) VALUES (?, ?, ?, ?)");
+    mysqli_stmt_bind_param($stmt, 'ssds', $title, $description, $target, $imageUrl);
     $result = mysqli_stmt_execute($stmt);
 
     if (!$result) {
@@ -78,6 +78,19 @@ function user_exists($email, $connection) {
     $result = mysqli_stmt_get_result($stmt);
     return mysqli_num_rows($result) > 0;
 }
+
+function user_information($email, $connection) {
+    $stmt = mysqli_prepare($connection, "SELECT * FROM user  WHERE email = ? LIMIT 1");
+    mysqli_stmt_bind_param($stmt, 's', $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    if ($user = mysqli_fetch_assoc($result)) {
+        return $user;
+    }
+    return false;
+}
+
 
 function fetch_all_campaigns($connection) {
     $query = "SELECT * FROM campaign";

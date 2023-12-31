@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } elseif (!$user['is_admin']) {
             $_SESSION['donor_email'] = $email;
-            header("Location: ../donor.php");
+            header("Location: ../index.php");
             exit();
         }
     } else {

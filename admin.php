@@ -16,7 +16,7 @@ if (!$_SESSION['admin_email']) {
         <h1>Crear nueva campaña</h1>
         <form action="process/process-admin.php" method="post" enctype="multipart/form-data">
             <input type="text" name="title" placeholder="Titulo" required>
-            <textarea name="description" placeholder="Describe porque quieres juntar dinero" required></textarea>
+            <textarea name="description" placeholder="Describe la motivación de tu campaña" required></textarea>
             <input type="number" name="target" placeholder="Cantidad a recaudar" required>
             <input type="file" name="image" accept="image/png" required>
             <input type="submit" value="Enviar">

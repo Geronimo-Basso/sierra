@@ -19,7 +19,7 @@ CREATE TABLE `campaign` (
 `title` VARCHAR(255) COLLATE utf8_spanish_ci,
 `description` TEXT COLLATE utf8_spanish_ci,
 `fund_target` FLOAT,
-`image` BLOB,
+`image_url` VARCHAR(255),
 PRIMARY KEY (`id_campaign`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
