@@ -19,13 +19,20 @@ $user= user_information($user_email, $connection);
     <main class="donate-main-content">
         <form class="donate-form" action="process/process-donation.php" method="post">
             <h1>Gracias por lo que haces.</h1>
+            <label>Email</label>
             <input type="text" value="<?php echo htmlspecialchars($user['email']); ?>" name="email" readonly>
-            <input type="text" value="<?php echo htmlspecialchars($user['name']); ?>" readonly>
-            <input type="text" value="<?php echo htmlspecialchars($user['lastname']); ?>" readonly>
-            <input type="text" value="<?php echo htmlspecialchars($campaign['title']); ?>" readonly>
-            <input type="text" value="<?php echo htmlspecialchars($campaign['description']); ?>" readonly>
-            <input type="number" name="amount" >
-            <input type="submit" name="Enviar Donación" >
+            <label>Nombre</label>
+            <input type="text" value="<?php echo htmlspecialchars($user['name']);?>" name="name" readonly>
+            <label>Apellidos</label>
+            <input type="text" value="<?php echo htmlspecialchars($user['lastname']); ?>" name="lastname" readonly>
+            <label>Titulo</label>
+            <input type="text" value="<?php echo htmlspecialchars($campaign['title']); ?>" name="title" readonly>
+            <label>Descripción</label>
+            <input type="text" value="<?php echo htmlspecialchars($campaign['description']); ?>" name="description" readonly>
+            <label>Cantidad a donar (€)</label>
+            <input type="number" name="amount" required>
+            <input style="display: none;" type="text" value="<?php echo htmlspecialchars($campaign['id_campaign']); ?>" name="id_campaign" readonly>
+            <input type="submit" name="Enviar Donación">
         </form>
     </main>
     <?php require 'includes/footer.php'; ?>

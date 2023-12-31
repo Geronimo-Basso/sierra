@@ -91,7 +91,6 @@ function user_information($email, $connection) {
     return false;
 }
 
-
 function fetch_all_campaigns($connection) {
     $query = "SELECT * FROM campaign";
     $result = mysqli_query($connection, $query);
@@ -135,6 +134,16 @@ function update_campaign($id, $title, $description, $fund_target, $connection) {
     return $result;
 }
 
-function blobToDataURI($blob, $mimeType) {
-    return 'data:' . $mimeType . ';base64,' . base64_encode($blob);
+function save_donation($email,$id_campaign,$amount,$date,$connection) {
+    $user = user_information($email,$connection);
+
+    $stmt = mysqli_prepare($connection, "INSERT INTO `donate` (`id_user`, `id_campaign`, `amount`, `datetime`) VALUES (?, ?, ?, ?)");
+    mysqli_stmt_bind_param($stmt, 'iiis', $user['id_user'], $id_campaign, $amount,$date);
+    $result = mysqli_stmt_execute($stmt);
+
+    if (!$result) {
+        return false;
+    }
+
+    return true;
 }
