@@ -21,9 +21,13 @@ $sessionActive = isset($_SESSION['donor_email']);
             <h1><?php echo htmlspecialchars($campaign['title']); ?> </h1>
             <p><?php echo htmlspecialchars($campaign['description']); ?></p>
             <?php if ($sessionActive): ?>
-                <a href="donate.php?campaign_id=<?php echo htmlspecialchars($campaign_id); ?>">Haz una donación </a>
+                <a class="donation-single-button" href="donate.php?campaign_id=<?php echo htmlspecialchars($campaign_id); ?>">
+                    <button>Haz una donación</button>
+                </a>
             <?php else: ?>
-                <a href='login.php'>Haz una donación</a>
+                <a class="donation-single-button" href='login.php'>
+                    <button>Haz una donación</button>
+                </a>
             <?php endif; ?>
         </div>
         <div class="donation-single-main-right">
