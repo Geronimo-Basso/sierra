@@ -107,8 +107,8 @@ button {
     width: 650px;
 }
 
-.donation-single-button {
-
+.donation-single-main-left, p{
+    line-height: 1.5;
 }
 
 /* Donate page */

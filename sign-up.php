@@ -2,8 +2,7 @@
 session_start();
 if ($_SESSION['donor_email']) {
     header("Location: index.php");
-}
-?>
+} ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,11 +34,27 @@ if ($_SESSION['donor_email']) {
         <?php require 'includes/footer.php'; ?>
         <script>
             function showTab(n) {
+                // Validation for the first tab before moving to the second
+                if (n === 1 && !validateFirstTab()) {
+                    return; // Stop the function if validation fails
+                }
+
                 var tabs = document.getElementsByClassName("tab");
                 for (var i = 0; i < tabs.length; i++) {
                     tabs[i].style.display = "none";
                 }
                 tabs[n].style.display = "block";
+            }
+
+            function validateFirstTab() {
+                var name = document.querySelector('input[name="name"]').value;
+                var lastname = document.querySelector('input[name="lastname"]').value;
+
+                if (name === "" || lastname === "") {
+                    alert("Rellene los campos de Nombre y Apellidos");
+                    return false;
+                }
+                return true;
             }
         </script>
     </body>

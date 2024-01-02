@@ -2,8 +2,7 @@
 session_start();
 if ($_SESSION['donor_email']) {
     header("Location: index.php");
-}
-?>
+}?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

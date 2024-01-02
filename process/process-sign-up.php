@@ -18,11 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($user_exists) {
         $_SESSION['user_exists'] = 'Ya existe un usuario registrado con ese email';
+        header("Location: ../sign-up.php");
     } else {
         $user_register = user_register($name, $lastname, $email, $password, $connection);
         $user_register ? $_SESSION['user_succeed'] = 'Usuario registrado con éxito' : $_SESSION['user_error'] = 'No pudimos registrarlo, intente nuevamente más tarde';
+        header("Location: index.php");
     }
     mysqli_close($connection);
-    header("Location: ../sign-up.php");
     exit();
 }
