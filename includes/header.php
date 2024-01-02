@@ -29,11 +29,9 @@ session_start();
         <nav>
             <ul>
                 <?php if (isset($_SESSION['donor_name'])): ?>
-                    <!-- User is logged in -->
-                    <span>Bienvenido, <?php echo htmlspecialchars($_SESSION['donor_name']); ?></span>
+                    <a href="user.php"><span>Bienvenido, <?php echo htmlspecialchars($_SESSION['donor_name']); ?></span></a>
                     <img src="assets/images/user.svg" style="height: 20px;">
                 <?php else: ?>
-                    <!-- User is not logged in -->
                     <a href="login.php"><li>Iniciar Sesión</li></a>
                     <a href="sign-up.php"><li>Registrarse</li></a>
                 <?php endif; ?>

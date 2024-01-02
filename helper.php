@@ -147,3 +147,41 @@ function save_donation($email,$id_campaign,$amount,$date,$connection) {
 
     return true;
 }
+
+function donation_by_user($email, $connection) {
+    $user = user_information($email, $connection);
+
+    // Prepare the SQL statement
+    $stmt = mysqli_prepare($connection, "SELECT * FROM `donate` WHERE id_user = ?");
+    mysqli_stmt_bind_param($stmt, 'i', $user['id_user']);
+
+    // Execute the statement
+    if (!mysqli_stmt_execute($stmt)) {
+        return false;  // Return false if execution fails
+    }
+
+    // Get the result set from the statement
+    $result = mysqli_stmt_get_result($stmt);
+
+    // Fetch all rows at once
+    $donations = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    // Check if donations were found
+    if (!empty($donations)) {
+        return $donations;  // Return all rows
+    } else {
+        return false;  // Return false if no rows found
+    }
+}
+
+function campaign_by_id($campaign_id,$connection) {
+    $stmt = mysqli_prepare($connection, "SELECT * FROM campaign  WHERE id_campaign = ? LIMIT 1");
+    mysqli_stmt_bind_param($stmt, 'i', $campaign_id);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    if ($campaign = mysqli_fetch_assoc($result)) {
+        return $campaign;
+    }
+    return false;
+}
