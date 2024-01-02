@@ -217,6 +217,17 @@ button {
 }
 /* Login Page */
 
+/* Profile */
+.user-content {
+    margin: 0 140px;
+}
+
+.user-form input {
+    display: block; /* This makes each element take up the full width of its container */
+    margin-bottom: 10px; /* Adds some space below each element */
+}
+
+
 /* Sign up*/
 .sign-up-main-content {
     text-align: center;
@@ -405,6 +416,8 @@ td {
     width: 100%;
     background-color: #eeeeee;
 }
+
+/* Responsive design  */
 
 @media only screen and (max-width: 1600px) {
 
