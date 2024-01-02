@@ -22,13 +22,19 @@ $user = user_information($user_email, $connection);
     <?php require 'includes/headernavmobile.php'; ?>
     <main class="user-content">
         <h1>Información personal:</h1>
-        <form class="user-form" method="post">
-            <label>Email</label>
-            <input type="text" value="<?php echo htmlspecialchars($user['email']); ?>" name="email" readonly>
-            <label>Nombre</label>
-            <input type="text" value="<?php echo htmlspecialchars($user['name']);?>" name="name" readonly>
-            <label>Apellidos</label>
-            <input type="text" value="<?php echo htmlspecialchars($user['lastname']); ?>" name="lastname" readonly>
+        <div class="user-info">
+            <div>
+                <label>Email</label>
+                <span><?php echo htmlspecialchars($user['email']); ?></span>
+            </div>
+            <div>
+                <label>Nombre</label>
+                <span><?php echo htmlspecialchars($user['name']); ?></span>
+            </div>
+            <div>
+                <label>Apellidos</label>
+                <span><?php echo htmlspecialchars($user['lastname']); ?></span>
+            </div>
             <p>Donaciones realizadas:<br></p>
             <table>
                 <thead>
@@ -46,14 +52,15 @@ $user = user_information($user_email, $connection);
                     ?>
                     <tr>
                         <td><?php echo htmlspecialchars($campaign['title']); ?></td>
-                        <td><?php echo htmlspecialchars($donation['amount']) . '€' ; ?></td>
+                        <td><?php echo htmlspecialchars($donation['amount']) . '€'; ?></td>
                         <td><?php echo htmlspecialchars($donation['datetime']); ?></td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
             </table>
-        </form>
-        <form action="includes/close-session.php" method="post">
+        </div>
+
+        <form class="user-form" action="includes/close-session.php" method="post">
             <input type="submit" value="Cerrar Sesión">
         </form>
     </main>

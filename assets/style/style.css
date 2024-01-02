@@ -87,7 +87,6 @@ button {
     margin: 0 140px;
 }
 
-
 .donation-main-boxes {
     display: flex;
 }
@@ -95,6 +94,7 @@ button {
 .donation-main-box {
     margin: 0 10px;
 }
+
 /* Donation single */
 .donation-single-main-content {
     display: flex;
@@ -223,10 +223,25 @@ button {
 }
 
 .user-form input {
-    display: block; /* This makes each element take up the full width of its container */
-    margin-bottom: 10px; /* Adds some space below each element */
+    margin: 10px 0;
+    border-color: #000;
+    font-size: 25px;
+    border-radius: 60px;
+    padding: 5px 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+.user-form input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+}
+
+.user-form input[type="submit"]:hover {
+    background-color: #444;
+    color: #fff;
+}
 
 /* Sign up*/
 .sign-up-main-content {
