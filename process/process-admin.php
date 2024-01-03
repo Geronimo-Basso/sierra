@@ -9,20 +9,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $target = $_POST['target'];
     $image = $_FILES['image'];
 
-    // Define the target directory and file
-    $targetDir = __DIR__ . '/../uploads/'; // Directory where files will be saved
-    $targetFile = $targetDir . basename($image["name"]); // Path of the file to be uploaded
+    // Get the file extension
+    $imageFileType = strtolower(pathinfo($image["name"], PATHINFO_EXTENSION));
+
+    // Generate a unique file name
+    $newFileName = uniqid('image_', true) . '.' . $imageFileType;
+    $targetFile = __DIR__ . '/../uploads/' . $newFileName;
 
     // Move the uploaded file to the target path
     if (move_uploaded_file($image["tmp_name"], $targetFile)) {
-        echo "The file has been uploaded.";
+        echo "The file has been uploaded with a new name: " . $newFileName;
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
 
-    $saved_campaing = save_campaign($title,$description,$target,basename($image["name"]),$connection);
+    // Save the campaign with the new image name
+    $saved_campaign = save_campaign($title, $description, $target, $newFileName, $connection);
 
-    if ($saved_campaing) {
+    if ($saved_campaign) {
         $_SESSION['saved'] = 'Campaña guardada con exito';
     } else {
         $_SESSION['error'] = 'ERROR, la campaña no se guardo';
@@ -31,3 +35,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 mysqli_close($connection);
+?>
