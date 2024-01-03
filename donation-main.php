@@ -21,6 +21,7 @@ $campaigns = fetch_all_campaigns($connection);
             <a href="donation-single.php?campaign_id=<?php echo htmlspecialchars($campaign['id_campaign']); ?>">
                 <div class="donation-main-box">
                     <h3><?php echo htmlspecialchars($campaign['title']); ?></h3>
+                    <img src="<?php echo 'uploads/' . htmlspecialchars($campaign['image_url']);?>">
                     <p><?php echo htmlspecialchars($campaign['fund_target']); ?></p>
                 </div>
             </a>

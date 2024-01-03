@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Sorry, there was an error uploading your file.";
     }
 
-    $saved_campaing = save_campaign($title,$description,$target,$image,$connection);
+    $saved_campaing = save_campaign($title,$description,$target,basename($image["name"]),$connection);
 
     if ($saved_campaing) {
         $_SESSION['saved'] = 'Campaña guardada con exito';
@@ -30,5 +30,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: ../admin.php");
     exit();
 }
-
 mysqli_close($connection);

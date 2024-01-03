@@ -31,7 +31,7 @@ $sessionActive = isset($_SESSION['donor_email']);
             <?php endif; ?>
         </div>
         <div class="donation-single-main-right">
-            <img style="width: 500px; margin-top: 40px;" src="assets/images/flying-cazas.png" id="donation-single-main-image">
+            <img style="width: 500px; margin-top: 40px;" src="<?php echo 'uploads/' . htmlspecialchars($campaign['image_url']);?>">
         </div>
     </main>
     <?php require 'includes/footer.php'; ?>
