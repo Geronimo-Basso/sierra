@@ -436,9 +436,61 @@ td {
     background-color: #eeeeee;
 }
 
+/* about user */
+.user-info{
+    font-size: 1.5em;
+    border: #CCCCCC 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 90%;
+}
+
+#user-close-session{
+    margin-top: 10px;
+    width: 300px;
+}
+
+.user-about-label{
+    font-weight: 900;
+}
+
+.user-about-lane{
+    margin-bottom: 10px;
+    border-bottom: #3A3A3A 1px solid;
+}
+
+/* swiper */
+
+.swiper-container {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    vertical-align: center;
+    margin-bottom: 100px;
+}
+.swiper-slide {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    border: grey solid 3px;
+    border-radius: 10px;
+    padding-bottom: 80px;
+}
+.donation-main-box {
+    text-align: center;
+    width: 100%;
+}
+
+.swiper-pagination {
+    bottom: 5px;
+}
+
+
 /* Responsive design  */
 
 @media only screen and (max-width: 1600px) {
+
 
     .sign-up-main-content{
         text-align: center;
@@ -449,6 +501,26 @@ td {
 
 
 @media only screen and (max-width: 1200px) {
+
+    .user-info{
+        font-size: 0.8em;
+        margin: 0;
+        width: 130%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #user-close-session{
+        margin-top: 10px;
+        width: 130%;
+        justify-self: center;
+
+    }
+
 
     .footerF{
         margin-top: 2px;
@@ -522,6 +594,25 @@ td {
     }
     .about-us-main-content {
         margin: 0 10% 0 10%;
+    }
+
+    /* swiper */
+
+    .swiper-container {
+        height: 60vh; /* Adjust as needed for mobile */
+    }
+    .swiper-slide {
+        width: 100%; /* Full width on mobile */
+        height: auto;
+        display: block;
+        border: none;
+    }
+    .donation-main-box {
+        margin-bottom: 30px;
+    }
+    h3 { /* Ensure titles are visible */
+        color: #000; /* Adjust as needed */
+        font-size: 1.2em; /* Adjust as needed */
     }
 
 }
@@ -605,6 +696,9 @@ td {
     }
     .admin-table-body input[type="submit"]{
         background-color: #3A3A3A;
+    }
+    .swiper-slide {
+        background-color: #333;
     }
 
 }

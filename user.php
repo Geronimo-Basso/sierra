@@ -23,19 +23,19 @@ $user = user_information($user_email, $connection);
     <main class="user-content">
         <h1>Información personal:</h1>
         <div class="user-info">
-            <div>
-                <label>Email</label>
+            <div class="user-about-lane">
+                <label class="user-about-label">Email</label>
                 <span><?php echo htmlspecialchars($user['email']); ?></span>
             </div>
-            <div>
-                <label>Nombre</label>
+            <div class="user-about-lane">
+                <label class="user-about-label">Nombre</label>
                 <span><?php echo htmlspecialchars($user['name']); ?></span>
             </div>
-            <div>
-                <label>Apellidos</label>
+            <div class="user-about-lane">
+                <label class="user-about-label">Apellidos</label>
                 <span><?php echo htmlspecialchars($user['lastname']); ?></span>
             </div>
-            <p>Donaciones realizadas:<br></p>
+            <p class="user-about-p">Donaciones realizadas:<br></p>
             <table>
                 <thead>
                 <tr>
@@ -61,7 +61,7 @@ $user = user_information($user_email, $connection);
         </div>
 
         <form class="user-form" action="includes/close-session.php" method="post">
-            <input type="submit" value="Cerrar Sesión">
+            <input id="user-close-session" type="submit" value="Cerrar Sesión">
         </form>
     </main>
     <?php require 'includes/footer.php'; ?>
