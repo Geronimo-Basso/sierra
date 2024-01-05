@@ -25,8 +25,19 @@ $campaigns = fetch_all_campaigns($connection);
                     <a href="donation-single.php?campaign_id=<?php echo htmlspecialchars($campaign['id_campaign']); ?>">
                         <div class="donation-main-box">
                             <h3><?php echo htmlspecialchars($campaign['title']); ?></h3>
-                            <img style="height: 300px;" src="<?php echo 'uploads/' . htmlspecialchars($campaign['image_url']);?>">
-                            <p><?php echo htmlspecialchars($campaign['fund_target']); ?></p>
+                            <img style="height: 250px;" src="<?php echo 'uploads/' . htmlspecialchars($campaign['image_url']);?>">
+                            <div class="progress-bar-container">
+                                <?php
+                                $donations_received = donations_in_campaign($campaign['id_campaign'], $connection);
+                                $donation_percentage = $campaign['fund_target'] > 0 ? ($donations_received / $campaign['fund_target']) * 100 : 0;
+                                ?>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: <?= $donation_percentage ?>%;"></div>
+                                </div>
+                                <div class="progress-text"><?= round($donation_percentage, 2) ?>%</div>
+                            </div>
+                            <p>Donations Received: <?= $donations_received . '€'?></p>
+                            <p>Fund Target: <?= htmlspecialchars($campaign['fund_target']) . '€'?></p>
                         </div>
                     </a>
                 </div>

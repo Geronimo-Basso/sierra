@@ -207,3 +207,14 @@ function campaign_by_id($campaign_id, $connection)
     }
     return false;
 }
+
+function donations_in_campaign($campaign_id, $connection) {
+    $stmt = mysqli_prepare($connection, "SELECT SUM(amount) AS total_donations FROM donate WHERE id_campaign = ?");
+    mysqli_stmt_bind_param($stmt, 'i', $campaign_id);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    if ($row = mysqli_fetch_assoc($result)) {
+        return $row['total_donations'];
+    }
+    return false;
+}

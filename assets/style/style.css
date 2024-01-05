@@ -82,7 +82,7 @@ button {
 }
 /* Home Page  */
 
-/* Donation Page */
+/* Donation Main Page */
 .donation-main-content {
     margin: 0 140px;
 }
@@ -93,6 +93,40 @@ button {
 
 .donation-main-box {
     margin: 0 10px;
+}
+
+.progress-bar-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* Allows absolute positioning inside */
+    width: 70%;
+}
+
+.progress-bar {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.progress {
+    height: 30px;
+    background-color: #4caf50;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-text {
+    position: absolute; /* Position it over the progress bar */
+    width: 100%;
+    top: 0; /* Align to the top of the container */
+    left: 0; /* Align to the left of the container */
+    height: 30px; /* Same as progress bar */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: #333;
+    font-weight: bold;
 }
 
 /* Donation single */
