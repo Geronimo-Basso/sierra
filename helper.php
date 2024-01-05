@@ -6,7 +6,7 @@ define("DB_PASS", "");
 define("DB_NAME", "Sierra");
 
 $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
-if(mysqli_connect_errno()) {
+if (mysqli_connect_errno()) {
     die("La conexión con la BBDD ha fallado: " .
         mysqli_connect_error() .
         " (" . mysqli_connect_errno() . ")"
@@ -20,7 +20,8 @@ if(mysqli_connect_errno()) {
  * @param $connection
  * @return array|false
  */
-function login_user($email, $password, $connection) {
+function login_user($email, $password, $connection)
+{
     // Prepare and execute the query
     $stmt = mysqli_prepare($connection, "SELECT * FROM user  WHERE email = ? LIMIT 1");
     mysqli_stmt_bind_param($stmt, 's', $email);
@@ -44,7 +45,8 @@ function login_user($email, $password, $connection) {
  * @param $connection
  * @return bool
  */
-function save_campaign($title, $description, $target, $imageUrl, $connection) {
+function save_campaign($title, $description, $target, $imageUrl, $connection)
+{
     // Prepare the INSERT statement for campaign
     $stmt = mysqli_prepare($connection, "INSERT INTO `campaign` (`title`, `description`, `fund_target`, `image_url`) VALUES (?, ?, ?, ?)");
     mysqli_stmt_bind_param($stmt, 'ssds', $title, $description, $target, $imageUrl);
@@ -57,7 +59,8 @@ function save_campaign($title, $description, $target, $imageUrl, $connection) {
     return true;
 }
 
-function user_register($name, $lastname, $email, $password, $connection) {
+function user_register($name, $lastname, $email, $password, $connection)
+{
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     $stmt = mysqli_prepare($connection, "INSERT INTO `user` (`email`, `password`, `name`, `lastname`) VALUES (?, ?, ?, ?)");
     mysqli_stmt_bind_param($stmt, 'ssss', $email, $hashed_password, $name, $lastname);
@@ -70,7 +73,8 @@ function user_register($name, $lastname, $email, $password, $connection) {
     return true;
 }
 
-function user_exists($email, $connection) {
+function user_exists($email, $connection)
+{
     $stmt = mysqli_prepare($connection, "SELECT * FROM `user` WHERE email = ? LIMIT 1");
     mysqli_stmt_bind_param($stmt, 's', $email);
     mysqli_stmt_execute($stmt);
@@ -79,7 +83,8 @@ function user_exists($email, $connection) {
     return mysqli_num_rows($result) > 0;
 }
 
-function user_information($email, $connection) {
+function user_information($email, $connection)
+{
     $stmt = mysqli_prepare($connection, "SELECT * FROM user  WHERE email = ? LIMIT 1");
     mysqli_stmt_bind_param($stmt, 's', $email);
     mysqli_stmt_execute($stmt);
@@ -91,7 +96,8 @@ function user_information($email, $connection) {
     return false;
 }
 
-function fetch_all_campaigns($connection) {
+function fetch_all_campaigns($connection)
+{
     $query = "SELECT * FROM campaign";
     $result = mysqli_query($connection, $query);
     if (!$result) {
@@ -103,7 +109,8 @@ function fetch_all_campaigns($connection) {
     return $campaigns;
 }
 
-function get_single_campaign($id_campaign, $connection) {
+function get_single_campaign($id_campaign, $connection)
+{
     // Prepare the statement
     $stmt = mysqli_prepare($connection, "SELECT * FROM campaign WHERE id_campaign=?");
 
@@ -126,19 +133,32 @@ function get_single_campaign($id_campaign, $connection) {
     return $campaign;
 }
 
-function update_campaign($id, $title, $description, $fund_target, $connection) {
-    $stmt = mysqli_prepare($connection, "UPDATE campaign SET title=?, description=?, fund_target=? WHERE id_campaign=?");
-    mysqli_stmt_bind_param($stmt, 'ssdi', $title, $description, $fund_target, $id);
+function update_campaign($id, $title, $description, $fund_target, $newFileName, $connection) {
+    // Prepare the SQL statement with the parameters in the order of table columns
+    $stmt = mysqli_prepare($connection, "UPDATE campaign SET title=?, description=?, fund_target=?, image_url=? WHERE id_campaign=?");
+
+    // Bind the parameters to the statement in the same order
+    // The types are 'ssdsi' corresponding to two strings, one double, one string, and one integer
+    mysqli_stmt_bind_param($stmt, 'ssdsi', $title, $description, $fund_target, $newFileName, $id);
+
+    // Execute the statement
     $result = mysqli_stmt_execute($stmt);
+
+    // Close the statement
     mysqli_stmt_close($stmt);
+
+    // Return the result of the execution
     return $result;
 }
 
-function save_donation($email,$id_campaign,$amount,$date,$connection) {
-    $user = user_information($email,$connection);
+
+
+function save_donation($email, $id_campaign, $amount, $date, $connection)
+{
+    $user = user_information($email, $connection);
 
     $stmt = mysqli_prepare($connection, "INSERT INTO `donate` (`id_user`, `id_campaign`, `amount`, `datetime`) VALUES (?, ?, ?, ?)");
-    mysqli_stmt_bind_param($stmt, 'iiis', $user['id_user'], $id_campaign, $amount,$date);
+    mysqli_stmt_bind_param($stmt, 'iiis', $user['id_user'], $id_campaign, $amount, $date);
     $result = mysqli_stmt_execute($stmt);
 
     if (!$result) {
@@ -148,7 +168,8 @@ function save_donation($email,$id_campaign,$amount,$date,$connection) {
     return true;
 }
 
-function donation_by_user($email, $connection) {
+function donation_by_user($email, $connection)
+{
     $user = user_information($email, $connection);
 
     // Prepare the SQL statement
@@ -174,7 +195,8 @@ function donation_by_user($email, $connection) {
     }
 }
 
-function campaign_by_id($campaign_id,$connection) {
+function campaign_by_id($campaign_id, $connection)
+{
     $stmt = mysqli_prepare($connection, "SELECT * FROM campaign  WHERE id_campaign = ? LIMIT 1");
     mysqli_stmt_bind_param($stmt, 'i', $campaign_id);
     mysqli_stmt_execute($stmt);

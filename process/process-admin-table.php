@@ -2,11 +2,17 @@
 /** @var mysqli $connection */
 session_start();
 require_once '../helper.php';
+// Report all PHP errors
+error_reporting(E_ALL);
+
+// Display errors on the page
+ini_set('display_errors', 1);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id = $_POST['id'];
     $title = $_POST['title'];
     $description = $_POST['description'];
-    $target = $_POST['target'];
+    $fund_target = $_POST['fund_target'];
     $image = $_FILES['image'];
 
     // Get the file extension
@@ -19,19 +25,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Move the uploaded file to the target path
     if (move_uploaded_file($image["tmp_name"], $targetFile)) {
         echo "The file has been uploaded with a new name: " . $newFileName;
+        echo 'query done';
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
 
-    // Save the campaign with the new image name
-    $saved_campaign = save_campaign($title, $description, $target, $newFileName, $connection);
-
-    if ($saved_campaign) {
-        $_SESSION['saved'] = 'Campaña guardada con exito';
+    /** @var mysqli $connection */
+    if (update_campaign($id, $title, $description, $fund_target,$newFileName,$connection)) {
+        header("Location: ../admin-table.php");
+        exit();
     } else {
-        $_SESSION['error'] = 'ERROR, la campaña no se guardo';
+        echo "Error updating record: " . mysqli_error($connection);
     }
+
     header("Location: ../admin.php");
     exit();
 }
+
 mysqli_close($connection);
