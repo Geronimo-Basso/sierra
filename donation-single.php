@@ -19,6 +19,10 @@ $sessionActive = isset($_SESSION['donor_email']);
     <main class="donation-single-main-content">
         <div class="donation-single-main-left">
             <h1><?php echo htmlspecialchars($campaign['title']); ?> </h1>
+            <div>
+                <h3>Donaciones recibidas <?php echo donations_in_campaign($campaign['id_campaign'], $connection) . '€';?></h3>
+                <h3>Cantidad a recuadrar: <?php echo $campaign['fund_target'] . '€'?> </h3>
+            </div>
             <p><?php echo htmlspecialchars($campaign['description']); ?></p>
             <?php if ($sessionActive): ?>
                 <a class="donation-single-button" href="donate.php?campaign_id=<?php echo htmlspecialchars($campaign_id); ?>">

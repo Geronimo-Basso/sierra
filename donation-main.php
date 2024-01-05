@@ -34,10 +34,10 @@ $campaigns = fetch_all_campaigns($connection);
                                 <div class="progress-bar">
                                     <div class="progress" style="width: <?= $donation_percentage ?>%;"></div>
                                 </div>
-                                <div class="progress-text"><?= round($donation_percentage, 2) ?>%</div>
+                                <div class="progress-text"><?= round($donation_percentage, 1) ?>%</div>
                             </div>
-                            <p>Donations Received: <?= $donations_received . '€'?></p>
-                            <p>Fund Target: <?= htmlspecialchars($campaign['fund_target']) . '€'?></p>
+                            <p>Donaciones recibidas: <?= $donations_received . '€'?></p>
+                            <p>Cantidad a recuadrar: <?= htmlspecialchars($campaign['fund_target']) . '€'?></p>
                         </div>
                     </a>
                 </div>
@@ -48,7 +48,6 @@ $campaigns = fetch_all_campaigns($connection);
     </div>
 </main>
 <?php require 'includes/footer.php'; ?>
-
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="assets/scripts/swiper.js"></script>
 </body>
