@@ -22,9 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         }
     } else {
-        // User not found or password incorrect
-        $_SESSION['error_message'] = 'Usuario o password incorrecto';
-        header("Location: ../index.php");
+        $_SESSION['error_message'] = 'Email o Contraseña incorrecto';
+        header("Location: ../login.php");
         exit();
     }
     mysqli_close($connection);

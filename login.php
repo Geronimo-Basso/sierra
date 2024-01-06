@@ -20,9 +20,13 @@ if ($_SESSION['donor_email']) {
             <form class="login-in-form" action="process/process-login.php" method="post">
                 <input type="text" id="email" name="email" placeholder="Email" required><br>
                 <input type="password" id="password" name="password" placeholder="Contraseña" required><br>
-                <p><a><u>¿Olvidaste tu contraseña?</u> </a></p>
                 <input type="submit" value="Iniciar sesión">
-                <p>Al iniciar sesión aceptas <a> <u>terminos y condiciones.</u> </a></p>
+                <?php
+                    if (!empty($_SESSION['error_message'])) {
+                        echo "<div style='color: red;'>" . $_SESSION['error_message'] . "</div>";
+                        unset($_SESSION['error_message']);
+                    }
+                ?>
             </form>
         </div>
     </div>
