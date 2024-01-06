@@ -28,6 +28,12 @@ if ($_SESSION['donor_email']) {
                         <button type="button" onclick="showTab(0)">Previous</button>
                         <button type="submit">Submit</button>
                     </div>
+                    <?php
+                    if (!empty($_SESSION['user_exists'])) {
+                        echo "<div style='color: red;'>" . $_SESSION['user_exists'] . "</div>";
+                        unset($_SESSION['user_exists']);
+                    }
+                    ?>
                 </form>
             </div>
         </div>
