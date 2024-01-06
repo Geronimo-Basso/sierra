@@ -323,8 +323,9 @@ button {
 
 }
 
-.about-us-main-text {
+#about-us-main-text {
     text-align: justify;
+    line-height: 2.0;
 }
 
 
