@@ -15,7 +15,7 @@ $campaigns = fetch_all_campaigns($connection);
 <?php require 'includes/headernavmobile.php'; ?>
 <main class="donation-main-content">
     <div class="donation-main-content-home">
-        <h1>Ayuda a nuestros heroes</h1>
+        <h1 id="donation-main-title" >Ayuda a nuestros heroes</h1>
     </div>
     <!-- Swiper -->
     <div class="swiper-container">
