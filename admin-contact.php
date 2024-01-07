@@ -12,7 +12,7 @@ if (!isset($_SESSION['admin_email'])) {
 <html lang="en">
 <head>
     <?php require 'head.php'; ?>
-    <title>Contact Messages Dashboard</title>
+    <title>Mensajes de Contacto</title>
 </head>
 <body>
 <?php require 'includes/header-admin.php'; ?>
@@ -23,11 +23,11 @@ if (!isset($_SESSION['admin_email'])) {
         <thead>
         <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Last Name</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
             <th>Email</th>
-            <th>Phone</th>
-            <th>Message</th>
+            <th>Teléfono</th>
+            <th>Mensaje</th>
         </tr>
         </thead>
         <tbody class="admin-table-body">

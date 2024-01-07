@@ -22,10 +22,10 @@ if (!isset($_SESSION['admin_email'])) {
             <thead>
             <tr>
                 <th>ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Fund Target</th>
-                <th>Image</th>
+                <th>Titulo</th>
+                <th>Descripción</th>
+                <th>Cantidad a recaudar</th>
+                <th>Imagen</th>
             </tr>
             </thead>
             <tbody class="admin-table-body">

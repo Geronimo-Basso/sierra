@@ -10,10 +10,10 @@
         <nav>
             <ul class="ul-header-admin">
                 <a href="/sierra/admin-table.php">
-                    <li id="admin-header-li">Modify campaings</li>
+                    <li id="admin-header-li">Modificar campañas</li>
                 </a>
                 <a href="/sierra/admin-contact.php">
-                    <li id="admin-header-li">See messages</li>
+                    <li id="admin-header-li">Ver Mensajes</li>
                 </a>
                 <form action="includes/close-session.php" method="post">
                     <input class="ul-header-admin input" style=""  type="submit" value="Cerrar Sesión">
