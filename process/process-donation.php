@@ -8,18 +8,16 @@ error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
-    $name = $_POST['name'];
-    $lastname = $_POST['lastname'];
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $amount = $_POST['amount'];
     $id_campaign = $_POST['id_campaign'];
+    $amount = $_POST['amount'];
 
     $save_donation = save_donation($email,$id_campaign,$amount,date("Y-m-d H:i:s"),$connection);
 
+    $redirectUrl = "../donate.php"; // Modify this URL as needed
+
     if ($save_donation) {
-        header("Location: ../donation-single.php");
+        header("Location: " . $redirectUrl . "?donation_status=success");
     } else {
-        header("Location: ../donation-single.php");
+        header("Location: " . $redirectUrl . "?donation_status=failure");
     }
 }
