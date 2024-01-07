@@ -142,6 +142,7 @@ button {
     margin: 0 140px;
     margin-top: 20px;
     gap: 10px;
+    justify-content: center; /* Centers horizontally */
 }
 
 #donation-single-main-image {
@@ -150,6 +151,12 @@ button {
 
 .donation-single-main-left, p{
     line-height: 1.5;
+}
+
+.donation-single-main-right-image {
+    width: 500px;
+    margin-top: 40px;
+    border-radius: 30px;
 }
 
 /* Donate page */
@@ -539,15 +546,11 @@ td {
 /* Responsive design  */
 
 @media only screen and (max-width: 1600px) {
-
-
     .sign-up-main-content{
         text-align: center;
         margin: 20px 400px;
     }
-
 }
-
 
 @media only screen and (max-width: 1200px) {
 
@@ -569,7 +572,6 @@ td {
         justify-self: center;
 
     }
-
 
     .footerF{
         margin-top: 2px;
@@ -668,6 +670,24 @@ td {
         color: #000; /* Adjust as needed */
         font-size: 1.2em; /* Adjust as needed */
     }
+
+    .donation-single-main-content {
+        flex-wrap: wrap-reverse;
+    }
+
+    .donation-single-main-right {
+        height: 80%;
+        margin-top: 100px;
+        display: flex;
+    }
+
+    #donation-single-main-right-image {
+        width: 10px;
+        order: 1;
+        margin: 1px;
+        margin-top: 100px;
+    }
+
 
 }
 
