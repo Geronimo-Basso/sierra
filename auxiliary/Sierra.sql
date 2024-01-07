@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-01-2024 a las 15:55:21
+-- Tiempo de generación: 07-01-2024 a las 15:20:03
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -40,10 +40,33 @@ CREATE TABLE `campaign` (
 --
 
 INSERT INTO `campaign` (`id_campaign`, `title`, `description`, `fund_target`, `image_url`) VALUES
-(1, 'Honrar a un Héroe: La Travesía de Geronimo Basso', 'Únase a nosotros para honrar a Geronimo Basso, un valiente soldado uruguayo español cuyo servicio a nuestra nación ha sido marcado por la valentía y la dedicación. A través de esta campaña, pretendemos producir un documental que muestre su extraordinaria trayectoria y los sacrificios que realizó. La historia de Geronimo no es solo de compromiso militar, sino también de resiliencia personal y compromiso con su país. El documental explorará sus primeros años en Uruguay, las razones detrás de su decisión de servir en el ejército español y las experiencias impactantes que encontró. Nuestro objetivo es traer su inspiradora historia al primer plano, destacando los valores universales de coraje, lealtad y perseverancia. Su apoyo ayudará a financiar los costos de producción, incluyendo filmación, edición y distribución, asegurando que el legado de Geronimo Basso sea celebrado y recordado.', 50000, 'image_659570164cfd81.67886079.png'),
+(1, 'Honrar a un Héroe: La Travesía de Geronimo Basso', 'Únase a nosotros para honrar a Geronimo Basso, un valiente soldado uruguayo español cuyo servicio a nuestra nación ha sido marcado por la valentía y la dedicación. A través de esta campaña, pretendemos producir un documental que muestre su extraordinaria trayectoria y los sacrificios que realizó. La historia de Geronimo no es solo de compromiso militar, sino también de resiliencia personal y compromiso con su país. El documental explorará sus primeros años en Uruguay, las razones detrás de su decisión de servir en el ejército español y las experiencias impactantes que encontró. Nuestro objetivo es traer su inspiradora historia al primer plano, destacando los valores universales de coraje, lealtad y perseverancia. Su apoyo ayudará a financiar los costos de producción, incluyendo filmación, edición y distribución, asegurando que el legado de Geronimo Basso sea celebrado y recordado.', 50000, 'image_6597f19dc6fbc3.51039902.png'),
 (2, 'Apoyo para Jorge Castilla - Un Legado Canario', 'Esta campaña es un llamado a la acción para apoyar a Jorge Castilla, un dedicado soldado canario que ha dado todo en el cumplimiento de su deber. Jorge sufrió una lesión que cambió su vida durante su servicio, y ahora, más que nunca, necesita nuestro apoyo colectivo para su tratamiento médico y rehabilitación. Esta campaña no se trata solo de satisfacer sus necesidades de atención médica inmediatas, sino también de asegurar su bienestar y recuperación a largo plazo. La historia de Jorge es de un compromiso inquebrantable con su nación y sus compañeros soldados, a menudo poniendo su seguridad por encima de la suya. Los fondos recaudados contribuirán directamente a la atención médica especializada, programas de rehabilitación y ajustes necesarios en el hogar para ayudar en su recuperación. Al apoyar a Jorge, no solo estamos reconociendo sus sacrificios, sino también reforzando un mensaje de solidaridad y gratitud hacia aquellos que sirven a nuestro país.\r\n', 75000, 'image_659570310ec823.52824418.png'),
 (3, 'Manuel Contreras: Fondo Educativo de un Soldado Andaluz', 'Apoye el futuro de Manuel Contreras, un soldado andaluz cuya valentía en el servicio ha sido ejemplar. El objetivo de nuestra campaña es recaudar fondos para la educación y el desarrollo profesional de Manuel, ayudándolo en su transición a la vida civil después de años de servicio militar. El sueño de Manuel es cursar estudios superiores y desarrollar habilidades que le abran nuevas oportunidades profesionales, permitiéndole seguir contribuyendo a la sociedad de maneras significativas. Esta campaña es más que asistencia financiera; se trata de empoderar a un veterano para forjar un nuevo camino, lleno de esperanza y oportunidades. La historia de Manuel refleja la resiliencia y adaptabilidad de nuestros soldados, y al apoyar sus aspiraciones educativas, estamos invirtiendo en un futuro que honra su compromiso y sacrificios.', 60000, 'image_6595704f0947c0.17319135.png'),
-(4, 'Diego Ramírez: Ayuda para una Familia de Soldado', 'Participe en la causa de Diego Ramírez, un dedicado soldado español, que ahora busca apoyo para su familia. Esta campaña tiene como meta reunir fondos para asistir a la familia de Diego en un momento de necesidad. Después de servir fielmente a su país, Diego enfrenta desafíos personales y económicos significativos que afectan a sus seres queridos. Nuestro propósito es brindarle a su familia el soporte financiero necesario para superar estos tiempos difíciles, asegurando su bienestar y estabilidad. Apoyar a Diego y su familia no es solo un acto de generosidad, sino también un reconocimiento a su servicio y sacrificio. Cada contribución ayudará a esta familia a mantenerse firme y afrontar el futuro con mayor seguridad y esperanza. La historia de Diego es un testimonio de dedicación y amor por su familia, y su bienestar es una prioridad para todos nosotros que valoramos su compromiso y entrega.', 50000, 'image_659572b37c0fc7.43079664.png');
+(4, 'Diego Ramírez: Ayuda para una Familia de Soldado', 'Participe en la causa de Diego Ramírez, un dedicado soldado español, que ahora busca apoyo para su familia. Esta campaña tiene como meta reunir fondos para asistir a la familia de Diego en un momento de necesidad. Después de servir fielmente a su país, Diego enfrenta desafíos personales y económicos significativos que afectan a sus seres queridos. Nuestro propósito es brindarle a su familia el soporte financiero necesario para superar estos tiempos difíciles, asegurando su bienestar y estabilidad. Apoyar a Diego y su familia no es solo un acto de generosidad, sino también un reconocimiento a su servicio y sacrificio. Cada contribución ayudará a esta familia a mantenerse firme y afrontar el futuro con mayor seguridad y esperanza. La historia de Diego es un testimonio de dedicación y amor por su familia, y su bienestar es una prioridad para todos nosotros que valoramos su compromiso y entrega.', 50000, 'image_659572b37c0fc7.43079664.png'),
+(7, 'Paula: Ayuda para la Salud de un Soldada (Ejercito del Aire)', 'Paula, una destacada piloto del Ejército del Aire de España y orgullosa nativa de Lleida, Cataluña, se enfrenta a un desafío personal que amenaza su carrera y su pasión por volar. Durante una misión de rutina, Paula sufrió una lesión ocular inesperada. A pesar de los intentos iniciales de tratamiento, se ha hecho evidente que necesita una cirugía ocular avanzada para recuperar completamente su visión.\r\n', 120000, 'image_6597f6fa90fa54.09161926.png');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `contact`
+--
+
+CREATE TABLE `contact` (
+  `id_contact` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `contact`
+--
+
+INSERT INTO `contact` (`id_contact`, `name`, `lastname`, `email`, `phone`, `message`) VALUES
+(1, 'a', 'a', 'ger@a.com', '1111', 'asdanfoiasnd');
 
 -- --------------------------------------------------------
 
@@ -58,6 +81,24 @@ CREATE TABLE `donate` (
   `amount` float DEFAULT NULL,
   `datetime` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `donate`
+--
+
+INSERT INTO `donate` (`id_donate`, `id_user`, `id_campaign`, `amount`, `datetime`) VALUES
+(1, 2, 1, 50, '2024-01-05 14:59:25'),
+(2, 2, 2, 1000, '2024-01-05 15:00:01'),
+(3, 2, 1, 1000, '2024-01-05 15:02:55'),
+(4, 2, 1, 10000, '2024-01-05 15:50:12'),
+(5, 2, 2, 8000, '2024-01-05 15:50:23'),
+(6, 2, 7, 1000, '2024-01-07 08:12:28'),
+(7, 2, 7, 1000, '2024-01-07 08:19:09'),
+(8, 2, 7, 1, '2024-01-07 08:37:31'),
+(9, 2, 7, 100, '2024-01-07 08:38:34'),
+(10, 2, 3, 1000, '2024-01-07 08:42:16'),
+(11, 2, 3, 1000, '2024-01-07 08:45:52'),
+(12, 2, 3, 1000, '2024-01-07 08:49:16');
 
 -- --------------------------------------------------------
 
@@ -96,6 +137,12 @@ ALTER TABLE `campaign`
   ADD PRIMARY KEY (`id_campaign`);
 
 --
+-- Indices de la tabla `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id_contact`);
+
+--
 -- Indices de la tabla `donate`
 --
 ALTER TABLE `donate`
@@ -117,13 +164,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `campaign`
 --
 ALTER TABLE `campaign`
-  MODIFY `id_campaign` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_campaign` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `donate`
 --
 ALTER TABLE `donate`
-  MODIFY `id_donate` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_donate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
