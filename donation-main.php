@@ -18,6 +18,7 @@ $campaigns = fetch_all_campaigns($connection);
         <h1 id="donation-main-title" >Ayuda a nuestros heroes</h1>
     </div>
     <!-- Swiper -->
+    <div class="megacontainer">
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <?php foreach ($campaigns as $campaign): ?>
@@ -45,6 +46,7 @@ $campaigns = fetch_all_campaigns($connection);
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
+    </div>
     </div>
 </main>
 <?php require 'includes/footer.php'; ?>

@@ -109,6 +109,20 @@ function fetch_all_campaigns($connection)
     return $campaigns;
 }
 
+function fetch_all_contacts($connection)
+{
+    $query = "SELECT * FROM contact";
+    $result = mysqli_query($connection, $query);
+    if (!$result) {
+        die("Database query failed.");
+    }
+
+    $contacts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    return $contacts;
+
+}
+
 function get_single_campaign($id_campaign, $connection)
 {
     // Prepare the statement
