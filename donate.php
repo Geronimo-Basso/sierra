@@ -51,4 +51,3 @@ if (!$_SESSION['donor_email']) {
         }
     });
 </script>
-

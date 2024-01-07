@@ -218,3 +218,10 @@ function donations_in_campaign($campaign_id, $connection) {
     }
     return false;
 }
+
+function save_contact_message($name, $lastname, $email, $phone, $message, $connection) {
+    // Prepare the SQL statement
+    $stmt = $connection->prepare("INSERT INTO contact (name, lastname, email, phone, message) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $name, $lastname, $email, $phone, $message);
+    return $stmt->execute();
+}

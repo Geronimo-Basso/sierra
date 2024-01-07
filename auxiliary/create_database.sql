@@ -34,4 +34,14 @@ FOREIGN KEY (`id_user`) REFERENCES `user`(`id_user`),
 FOREIGN KEY (`id_campaign`) REFERENCES `campaign`(`id_campaign`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+CREATE TABLE `contact` (
+  id_contact INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  lastname VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(20),
+  message TEXT NOT NULL,
+  PRIMARY KEY (`id_contact`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
 COMMIT;
