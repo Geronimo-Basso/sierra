@@ -28,7 +28,7 @@ if ($_SESSION['admin_email']) {
                     <div class="swiper-slide">
                         <a href="donation-single.php?campaign_id=<?php echo htmlspecialchars($campaign['id_campaign']); ?>">
                             <div class="donation-main-box">
-                                <h3><?php echo htmlspecialchars($campaign['title']); ?></h3>
+                                <h3 style="width: 95%;"><?php echo htmlspecialchars($campaign['title']); ?></h3>
                                 <img style="height: 300px;" src="<?php echo 'uploads/' . htmlspecialchars($campaign['image_url']);?>">
                                 <div class="progress-bar-container">
                                     <?php
