@@ -1,5 +1,5 @@
 <headernavmobile>
-    <img class="three-lines" id="button-outside" src="assets/images/three-lines.svg">
+    <img class="three-lines" id="button-outside" src="assets/images/hamburger-menu-black.svg">
     <div id="menu-overlay" class="menu-overlay">
         <!--<img class="three-lines" id="button-inside" src="assets/images/three-lines.svg">-->
         <div class="menu-content">
@@ -52,7 +52,7 @@
             // Function to update image based on dark mode preference
             function updateImageForDarkMode() {
                 const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                buttonOutside.src = prefersDarkMode ? 'assets/images/three-lines_dm.svg' : 'assets/images/three-lines.svg';
+                buttonOutside.src = prefersDarkMode ? 'assets/images/hamburger-menu-white.svg' : 'assets/images/hamburger-menu-black.svg';
             }
 
             function updateThreeLinesStyle() {
