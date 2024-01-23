@@ -12,7 +12,12 @@ $user= user_information($user_email, $connection);
 
 if (!$_SESSION['donor_email']) {
     header("Location: login.php");
-}?>
+}
+
+if ($_SESSION['admin_email']) {
+    header("Location: admin.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

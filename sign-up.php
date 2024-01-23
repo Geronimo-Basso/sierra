@@ -2,7 +2,12 @@
 session_start();
 if ($_SESSION['donor_email']) {
     header("Location: index.php");
-} ?>
+}
+
+if ($_SESSION['admin_email']) {
+    header("Location: admin.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>

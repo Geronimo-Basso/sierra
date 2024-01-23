@@ -3,6 +3,9 @@
 require_once 'helper.php';
 session_start();
 $campaigns = fetch_all_campaigns($connection);
+if ($_SESSION['admin_email']) {
+    header("Location: admin.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

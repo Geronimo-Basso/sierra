@@ -1,5 +1,8 @@
 <?php
 session_start();
+if ($_SESSION['admin_email']) {
+    header("Location: admin.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
