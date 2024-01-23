@@ -1,4 +1,5 @@
 <?php
+
 // DataBase connection
 define("DB_SERVER", "localhost");
 define("DB_USER", "root");

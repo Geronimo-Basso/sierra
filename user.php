@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!$_SESSION['donor_email']) {
+if (!isset($_SESSION['donor_email'])) {
     header("Location: " . "index.php");
     exit();
 }

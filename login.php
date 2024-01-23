@@ -1,10 +1,10 @@
 <?php
 session_start();
-if ($_SESSION['donor_email']) {
+if (isset($_SESSION['donor_email'])) {
     header("Location: index.php");
 }
 
-if ($_SESSION['admin_email']) {
+if (isset($_SESSION['admin_email'])) {
     header("Location: admin.php");
 }
 ?>

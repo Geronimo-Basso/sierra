@@ -7,7 +7,7 @@ $campaign = get_single_campaign($campaign_id,$connection);
 
 // Check if the session has started or not to show different buttons.
 $sessionActive = isset($_SESSION['donor_email']);
-if ($_SESSION['admin_email']) {
+if (isset($_SESSION['admin_email'])) {
     header("Location: admin.php");
 }
 ?>

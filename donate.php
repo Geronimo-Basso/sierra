@@ -10,11 +10,11 @@ $campaign = get_single_campaign($campaign_id,$connection);
 $user_email = $_SESSION['donor_email'];
 $user= user_information($user_email, $connection);
 
-if (!$_SESSION['donor_email']) {
+if (!isset($_SESSION['donor_email'])) {
     header("Location: login.php");
 }
 
-if ($_SESSION['admin_email']) {
+if (isset($_SESSION['admin_email'])) {
     header("Location: admin.php");
 }
 ?>
