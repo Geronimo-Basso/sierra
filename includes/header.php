@@ -30,7 +30,7 @@ session_start();
             <ul>
                 <?php if (isset($_SESSION['donor_name'])): ?>
                     <a href="user.php"><span>Bienvenido, <?php echo htmlspecialchars($_SESSION['donor_name']); ?></span></a>
-                    <img src="assets/images/user.svg" style="height: 20px;">
+                    <img src="assets/images/user-logo.svg" style="height: 20px;">
                 <?php else: ?>
                     <a href="login.php"><li>Iniciar Sesión</li></a>
                     <a href="sign-up.php"><li>Registrarse</li></a>

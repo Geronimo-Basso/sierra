@@ -46,8 +46,10 @@ if (!$_SESSION['donor_email']) {
 
         if (donationStatus === 'success') {
             alert('Gracias por su donación!');
+            window.location.href = 'index.php';
         } else if (donationStatus === 'failure') {
             alert('Error, vuelve a internalo nuevamente más tarde.');
+            window.location.href = 'index.php';
         }
     });
 </script>

@@ -532,6 +532,7 @@ td {
     border: grey solid 3px;
     border-radius: 10px;
     position: unset !important;
+    padding-bottom: 20px;
 }
 .donation-main-box {
     text-align: center;
@@ -660,9 +661,7 @@ td {
         height: auto;
         display: block;
         border: none;
-        img {
-            width: 70%;
-        }
+
     }
     .donation-main-box {
         margin-bottom: 30px;
@@ -687,6 +686,10 @@ td {
         order: 1;
         margin: 1px;
         margin-top: 100px;
+    }
+
+    .progress-bar-container {
+        width: 50%;
     }
 
 
