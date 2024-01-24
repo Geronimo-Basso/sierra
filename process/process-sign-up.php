@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $user_register = user_register($name, $lastname, $email, $password, $connection);
         $user_register ? $_SESSION['user_succeed'] = 'Usuario registrado con éxito' : $_SESSION['user_error'] = 'No pudimos registrarlo, intente nuevamente más tarde';
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
     mysqli_close($connection);
     exit();
